@@ -1,0 +1,10 @@
+INSERT INTO CLAN VALUES('Janko', 'Petrovic', 1, 'Bulevar Mediana 12', '018-234-567', '01-Apr-17');
+INSERT INTO CLAN VALUES('Milan', 'Simic', 2, 'Dimitrija Tucovica 123', '064-23-12-098', '11-Sep-17');
+INSERT INTO CLAN VALUES('Bratislav', 'Videnovic', 3, 'Oblacica Rada 2', '063-78-23-234', '21-Jun-17');
+INSERT INTO CLAN VALUES('Svetlana', 'Jovanovic', 4, 'Bulevar Nemanjica 112/12', '018-515-567', '30-Jan-17');
+INSERT INTO CLAN VALUES('Stanko', 'Rajkovic', 5, 'Dusanova 120', '018-511-230', '19-Oct-17');
+INSERT INTO CLAN VALUES('Ljiljana', 'Stojanovic', 6, 'Jovana Ristica 34/12', '060-56-78-009', '20-May-17');
+INSERT INTO CLAN VALUES('Zorana', 'Pavlovic', 7, 'Aleksandra Medvedeva 33', '069-33-44-555', '13-Nov-17');
+INSERT INTO CLAN VALUES('Jovan', 'Markovic', 8, 'Kozaracka 3', '018-599-633', '17-Nov-17');
+INSERT INTO CLAN VALUES('Ivana', 'Stakovic', 9, 'Novopazarska 4', '065-44-16-428', '12-Mar-17');
+INSERT INTO CLAN VALUES('Dalibor', 'Jaksic', 10, 'Jugoviceva 11', '062-11-17-223', '07-Feb-17');

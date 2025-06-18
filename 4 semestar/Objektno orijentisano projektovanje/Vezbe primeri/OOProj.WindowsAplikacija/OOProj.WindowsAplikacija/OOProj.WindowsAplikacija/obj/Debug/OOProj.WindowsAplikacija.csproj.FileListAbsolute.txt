@@ -1,0 +1,23 @@
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\bin\Debug\OOProj.WindowsAplikacija.exe.config
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\bin\Debug\OOProj.WindowsAplikacija.exe
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\bin\Debug\OOProj.WindowsAplikacija.pdb
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.AssemblyReference.cache
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.SuggestedBindingRedirects.cache
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.GenerateResource.cache
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.exe
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.pdb
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.FormMain.resources
+C:\Users\Aleksandar\Desktop\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.FormStudent.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\bin\Debug\OOProj.WindowsAplikacija.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\bin\Debug\OOProj.WindowsAplikacija.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\bin\Debug\OOProj.WindowsAplikacija.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.FormMain.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.FormStudent.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\OOProj.WindowsAplikacija\obj\Debug\OOProj.WindowsAplikacija.pdb

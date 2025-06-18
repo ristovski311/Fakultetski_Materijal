@@ -1,0 +1,1 @@
+public record RekordZaSlanje(string Takmicenje, DateTime Datum, int SportistaID, int DisciplinaID);

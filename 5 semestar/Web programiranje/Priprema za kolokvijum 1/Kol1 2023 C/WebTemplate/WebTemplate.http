@@ -1,0 +1,60 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+GET {{WebTemplate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeZaposlenog' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "maticniBroj": "123456789013",
+  "ime": "Milenko",
+  "prezime": "Milenkovic",
+  "datumRodjenja": "1993-12-09T18:02:01.901Z",
+  "brojTelefona": "098765412"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeUstanove' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "Ustanova3",
+  "adresa": "abc3",
+  "brojTelefona": "1234567892",
+  "email": "abc3@mail.com"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/AngazovanjeZaposlenog' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "brojUgovora": 2,
+  "datumPotpisa": "2024-12-09T18:14:27.494Z",
+  "zaposleniId": 2,
+  "ustanovaId": 1
+}'
+
+###
+
+curl -X 'PUT' \
+  'https://localhost:7080/Ispit/IzmenaAngazovanja/2/3/5/2022-12-09T18%3A20%3A43.257Z' \
+  -H 'accept: */*'
+
+###
+
+curl -X 'GET' \
+  'https://localhost:7080/Ispit/PronalazakZaposlenih/2019-12-09T18%3A20%3A43.257Z' \
+  -H 'accept: */*'
+
+###

@@ -1,0 +1,10 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\bin\Debug\TekstEditor.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\bin\Debug\TekstEditor.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\bin\Debug\TekstEditor.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.Form1.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\TekstEditor\obj\Debug\TekstEditor.pdb

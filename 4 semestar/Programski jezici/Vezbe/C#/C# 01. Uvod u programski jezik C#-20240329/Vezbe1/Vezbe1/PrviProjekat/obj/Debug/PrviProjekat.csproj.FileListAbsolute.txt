@@ -1,0 +1,7 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\bin\Debug\PrviProjekat.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\bin\Debug\PrviProjekat.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\bin\Debug\PrviProjekat.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\obj\Debug\PrviProjekat.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\obj\Debug\PrviProjekat.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\obj\Debug\PrviProjekat.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 01. Uvod u programski jezik C#-20240329\Vezbe1\Vezbe1\PrviProjekat\obj\Debug\PrviProjekat.pdb

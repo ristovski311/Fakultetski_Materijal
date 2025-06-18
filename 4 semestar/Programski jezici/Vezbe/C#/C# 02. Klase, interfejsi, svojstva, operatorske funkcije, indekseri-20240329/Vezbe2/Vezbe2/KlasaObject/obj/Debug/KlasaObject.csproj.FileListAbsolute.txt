@@ -1,0 +1,7 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\bin\Debug\KlasaObject.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\bin\Debug\KlasaObject.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\bin\Debug\KlasaObject.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\obj\Debug\KlasaObject.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\obj\Debug\KlasaObject.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\obj\Debug\KlasaObject.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 02. Klase, interfejsi, svojstva, operatorske funkcije, indekseri-20240329\Vezbe2\Vezbe2\KlasaObject\obj\Debug\KlasaObject.pdb

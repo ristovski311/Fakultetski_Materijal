@@ -1,0 +1,21 @@
+head korisnik ne vidi
+stilovi, jezik..
+jedino naslov u tabu se vidi
+inline u blok DA
+blok u inline NE
+blok u blok DA
+
+NAJCESCI TAGOVI:
+
+html
+head
+title
+body
+hn - h1 h2 h3...
+p
+b 	bold
+i 	italic
+br 	<br/> SAMOZATVARAJUCI TAG	prelom
+div
+
+

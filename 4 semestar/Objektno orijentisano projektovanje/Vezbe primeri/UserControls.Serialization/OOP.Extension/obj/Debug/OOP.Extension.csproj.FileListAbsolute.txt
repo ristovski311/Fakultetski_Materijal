@@ -1,0 +1,11 @@
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Extension\bin\Debug\OOP.Extension.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Extension\bin\Debug\OOP.Extension.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Extension\bin\Debug\OOP.Extension.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Extension\bin\Debug\OOP.Extension.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Extension\obj\Debug\OOP.Extension.pdb

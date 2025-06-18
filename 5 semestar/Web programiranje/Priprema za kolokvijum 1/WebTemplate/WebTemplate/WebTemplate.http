@@ -1,0 +1,44 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+POST {{WebTemplate_HostAddress}}/Maraton/DodavanjeSportiste
+Content-Type: application/json
+Accept: application/json
+
+{
+    "ime": "Ime",
+    "prezime": "PreziIme",
+    "pol": "M",
+    "datumRodjenja": "2024-12-05T14:58:15.124Z"
+
+}
+
+###
+
+POST https://localhost:7080/Maraton/DodavanjeDiscipline/Maraton/Opis/10/2024-12-05T15%3A21%3A20.949Z
+Accept: */*
+Content-Type: application/json
+
+###
+
+DELETE {{WebTemplate_HostAddress}}/Maraton/BrisanjeRekorda/1
+
+###
+
+GET {{WebTemplate_HostAddress}}/Maraton/PronalazenjeRekordera/1980-12-05T15%3A21%3A20.949Z
+
+###
+
+GET {{WebTemplate_HostAddress}}/Maraton/PronadjiDisciplinu
+
+###
+
+POST {{WebTemplate_HostAddress}}/Maraton/DodajRekord
+Accept: application/json
+Content-Type: application/json
+
+{
+    "takmicenje": "Maraton",
+    "datum": "1200-12-05T14:58:15.124Z",
+    "sportistaID": 1,
+    "disciplinaID": 1
+}

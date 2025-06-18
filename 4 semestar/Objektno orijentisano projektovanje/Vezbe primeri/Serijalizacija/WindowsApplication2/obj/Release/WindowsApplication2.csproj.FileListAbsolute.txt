@@ -1,0 +1,20 @@
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\bin\Release\WindowsApplication2.exe
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\bin\Release\WindowsApplication2.pdb
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.csprojAssemblyReference.cache
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication1.Form1.resources
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication1.Form2.resources
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication1.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.csproj.GenerateResource.cache
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.exe
+C:\Users\Aleksandar\Desktop\OOProj\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\bin\Release\WindowsApplication2.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\bin\Release\WindowsApplication2.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication1.FormStudent.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication1.FormPredmet.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication1.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\Serijalizacija\WindowsApplication2\obj\Release\WindowsApplication2.pdb

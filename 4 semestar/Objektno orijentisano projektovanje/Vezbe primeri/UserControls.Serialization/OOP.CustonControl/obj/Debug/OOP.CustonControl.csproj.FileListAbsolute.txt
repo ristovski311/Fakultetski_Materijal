@@ -1,0 +1,38 @@
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustonControl.exe.config
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustonControl.exe
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustonControl.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustomControls.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Extension.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Podaci.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustomControls.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustomControls.dll.config
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Extension.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Podaci.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Podaci.dll.config
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csprojAssemblyReference.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.FormGlavna.resources
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.GenerateResource.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.CopyComplete
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.exe
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustonControl.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustonControl.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustonControl.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustomControls.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Extension.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustomControls.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.CustomControls.dll.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Extension.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\bin\Debug\OOP.Podaci.dll.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.FormGlavna.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.csproj.CopyComplete
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustonControl\obj\Debug\OOP.CustonControl.pdb

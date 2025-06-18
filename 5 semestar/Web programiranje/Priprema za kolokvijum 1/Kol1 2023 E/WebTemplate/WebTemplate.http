@@ -1,0 +1,64 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+GET {{WebTemplate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeKorisnika' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "identifikator": 4,
+  "ime": "Sara",
+  "prezime": "Milic",
+  "datumRodjenja": "2001-12-09T20:03:32.128Z",
+  "pol": "Z",
+  "brojIznajmljenihKnjiga": 0
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeKnjige' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naslov": "Action!",
+  "datumIzdavanja": "2008-12-09T20:05:35.203Z",
+  "autor": "Bobby Ro",
+  "zanr": "Akcija",
+  "brojDostupnihPrimeraka": 2
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/Iznajmljivanje' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "knjigaId": 1,
+  "korisnikId": 2,
+  "datumIznajmljivanja": "2024-12-09T20:19:25.464Z",
+  "rokZaVracanje": 10
+}'
+
+###
+
+curl -X 'PUT' \
+  'https://localhost:7080/Ispit/Vrati/2/1' \
+  -H 'accept: */*'
+
+###
+
+curl -X 'GET' \
+  'https://localhost:7080/Ispit/NisuVratili' \
+  -H 'accept: */*'
+
+###
+
+

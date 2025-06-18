@@ -1,0 +1,10 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\bin\Debug\Kalkulator.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\bin\Debug\Kalkulator.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\bin\Debug\Kalkulator.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.Form1.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 04. Interfejs IEnumerable, delegati, događaji, Windows forme-20240329\Vezbe4\Vezbe4\Kalkulator\obj\Debug\Kalkulator.pdb

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Darko\\Desktop\\restorani\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|c:\\users\\darko\\desktop\\restorani\\models\\sastojak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|solutionrelative:models\\sastojak.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|c:\\users\\darko\\desktop\\restorani\\models\\restoranicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|solutionrelative:models\\restoranicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|c:\\users\\darko\\desktop\\restorani\\controllers\\sastojakcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|solutionrelative:controllers\\sastojakcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|c:\\users\\darko\\desktop\\restorani\\controllers\\menicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|solutionrelative:controllers\\menicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|c:\\users\\darko\\desktop\\restorani\\restorani.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{558AF8E4-7396-4853-8A64-C0BCCB699B5F}|restorani.csproj|solutionrelative:restorani.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Sastojak.cs",
+              "DocumentMoniker": "C:\\Users\\Darko\\Desktop\\restorani\\Models\\Sastojak.cs",
+              "RelativeDocumentMoniker": "Models\\Sastojak.cs",
+              "ToolTip": "C:\\Users\\Darko\\Desktop\\restorani\\Models\\Sastojak.cs",
+              "RelativeToolTip": "Models\\Sastojak.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T18:35:03.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RestoraniContext.cs",
+              "DocumentMoniker": "C:\\Users\\Darko\\Desktop\\restorani\\Models\\RestoraniContext.cs",
+              "RelativeDocumentMoniker": "Models\\RestoraniContext.cs",
+              "ToolTip": "C:\\Users\\Darko\\Desktop\\restorani\\Models\\RestoraniContext.cs",
+              "RelativeToolTip": "Models\\RestoraniContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T18:33:32.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "restorani.http",
+              "DocumentMoniker": "C:\\Users\\Darko\\Desktop\\restorani\\restorani.http",
+              "RelativeDocumentMoniker": "restorani.http",
+              "ToolTip": "C:\\Users\\Darko\\Desktop\\restorani\\restorani.http",
+              "RelativeToolTip": "restorani.http",
+              "ViewState": "AgIAAHYAAAAAIjMzMzMiwFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-11-20T18:32:48.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SastojakController.cs",
+              "DocumentMoniker": "C:\\Users\\Darko\\Desktop\\restorani\\Controllers\\SastojakController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SastojakController.cs",
+              "ToolTip": "C:\\Users\\Darko\\Desktop\\restorani\\Controllers\\SastojakController.cs",
+              "RelativeToolTip": "Controllers\\SastojakController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T18:38:20.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MeniController.cs",
+              "DocumentMoniker": "C:\\Users\\Darko\\Desktop\\restorani\\Controllers\\MeniController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MeniController.cs",
+              "ToolTip": "C:\\Users\\Darko\\Desktop\\restorani\\Controllers\\MeniController.cs",
+              "RelativeToolTip": "Controllers\\MeniController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T18:37:40.709Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

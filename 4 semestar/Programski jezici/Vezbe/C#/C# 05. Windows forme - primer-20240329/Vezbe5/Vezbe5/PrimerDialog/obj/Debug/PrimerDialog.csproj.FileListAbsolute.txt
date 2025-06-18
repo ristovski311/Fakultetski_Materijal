@@ -1,0 +1,14 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\bin\Debug\PrimerDialog.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\bin\Debug\PrimerDialog.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\bin\Debug\PrimerDialog.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\bin\Debug\Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\bin\Debug\Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.DijalogForma.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.Form1.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.csproj.CopyComplete
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerDialog\obj\Debug\PrimerDialog.pdb

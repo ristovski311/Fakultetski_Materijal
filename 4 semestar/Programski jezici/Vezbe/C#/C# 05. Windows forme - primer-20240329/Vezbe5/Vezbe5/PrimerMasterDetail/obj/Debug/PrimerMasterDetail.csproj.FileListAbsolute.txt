@@ -1,0 +1,13 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\bin\Debug\PrimerMasterDetail.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\bin\Debug\PrimerMasterDetail.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\bin\Debug\PrimerMasterDetail.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\bin\Debug\Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\bin\Debug\Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.Form1.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.csproj.CopyComplete
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\PrimerMasterDetail\obj\Debug\PrimerMasterDetail.pdb

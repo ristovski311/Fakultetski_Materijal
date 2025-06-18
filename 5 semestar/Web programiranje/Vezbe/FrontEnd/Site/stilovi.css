@@ -1,0 +1,71 @@
+p
+{
+    background-color: orange; 
+    border: 2px double black;
+}
+
+h1, h3 /*Zajedno dele iste karakteristike*/
+{
+    background-color: orangered;
+}
+
+h1 /*Kako bi samo h1 imao razlicite karakteristike!*/
+{
+    border: 6px solid darkgrey;
+}
+
+/* h3 NE MORAMO PONOVO
+{
+    background-color: orangered;
+} */
+
+
+/*KLASE*/
+
+.K1 /* .KLASA sintaksa  */
+{
+    font-style: italic;
+    color: rebeccapurple;
+}
+
+.K2
+{
+    text-align: center;
+}
+
+/* ID */
+
+#ID1 /*ID bi trebalo da bude jedistven da stranici, samo jednom elementu jedan id*/
+{
+    color: cornflowerblue;
+}
+
+/* PO ATRIBUTU */
+
+/*
+    h1[n2]
+    h1[id="n2"] IMA ID n2
+    h1[id^="n"] POCINJE SA n
+    h1[id*="1"] SADRZI 1
+    h1[id$="1"] ZAVRSAVA SE SA 1
+
+*/
+
+/* NASLEDJIVANJE */
+
+/*
+    <div>
+        <p> --
+        <h1> -- OVO SU DECA, nasledjuju stilove
+
+
+*/
+
+.class1
+{
+    background-color: rgb(29, 51, 180);
+}
+
+/*
+    W3SCHOOL najbolji izvor za ucenje!
+*/

@@ -1,0 +1,24 @@
+.dete
+{
+    border: 2px dotted #315593;
+    background-color: rgb(59, 221, 113);
+    width: 100px;
+}
+
+.roditelj
+{
+    border: 1px solid darkred;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 200px;
+    align-items: flex-end;
+}
+
+#treci
+{
+    order: -1;
+    flex-grow: 5;
+    align-self: baseline;
+}

@@ -1,0 +1,10 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\bin\Debug\RecnikSinonima.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\bin\Debug\RecnikSinonima.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\bin\Debug\RecnikSinonima.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.Form1.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 06. Windows forme - priprema za laboratorijsku vežbu-20240329\Vezbe6\Vezbe6\RecnikSinonima\obj\Debug\RecnikSinonima.pdb

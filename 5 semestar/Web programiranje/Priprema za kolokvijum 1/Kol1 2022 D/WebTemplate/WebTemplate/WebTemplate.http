@@ -1,0 +1,42 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodajBanku' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "POOL banka",
+  "lokacija": "Pirot",
+  "brojTelefona": "34872",
+  "brojZaposlenih": 10
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodajKlijenta' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "ime": "Mika",
+  "prezime": "Mikic",
+  "datumRodjenja": "1973-12-08T12:22:02.590Z",
+  "brojTelefona": "38424"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodajRacun/2/3/872384/2019-12-08T12%3A31%3A40.709Z' \
+  -H 'accept: */*' \
+  -d ''
+
+###
+
+curl -X 'PUT' \
+  'https://localhost:7080/Ispit/PromeniStanje/2/872384/2500' \
+  -H 'accept: */*'

@@ -1,0 +1,15 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeED' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "KsDist",
+  "grad": "Krusevac",
+  "email": "ksdist@mail.rs",
+  "brojRadnika": 300
+}'
+
+###

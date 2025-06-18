@@ -1,0 +1,27 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+POST {{WebTemplate_HostAddress}}/Ispit/DodajAerodrom
+Accept: application/json
+Content-Type: application/json
+
+{
+  "naziv": "PrivateJet",
+  "kod": "gs3",
+  "lokacija": "Krusevac",
+  "kapacitetLetelica": 600,
+  "kapacitetPutnika": 2300
+}
+
+###
+
+POST {{WebTemplate_HostAddress}}/Ispit/DodajLetelicu/Avio232/500/5/11344
+Accept: */*
+Content-Type: application/json
+
+
+###
+
+
+POST {{WebTemplate_HostAddress}}/Ispit/DodajLet/1/2/2/200/2024-12-07T15%3A40%3A44.016Z/2024-12-08T15%3A40%3A44.016Z
+Accept: */*
+Content-Type: application/json

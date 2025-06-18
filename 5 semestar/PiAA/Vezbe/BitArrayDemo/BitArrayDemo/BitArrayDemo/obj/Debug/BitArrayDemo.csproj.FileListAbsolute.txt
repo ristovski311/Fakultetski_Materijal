@@ -1,0 +1,6 @@
+c:\users\petar\documents\visual studio 2013\Projects\BitArrayDemo\BitArrayDemo\bin\Debug\BitArrayDemo.exe.config
+c:\users\petar\documents\visual studio 2013\Projects\BitArrayDemo\BitArrayDemo\bin\Debug\BitArrayDemo.exe
+c:\users\petar\documents\visual studio 2013\Projects\BitArrayDemo\BitArrayDemo\bin\Debug\BitArrayDemo.pdb
+c:\users\petar\documents\visual studio 2013\Projects\BitArrayDemo\BitArrayDemo\obj\Debug\BitArrayDemo.csprojResolveAssemblyReference.cache
+c:\users\petar\documents\visual studio 2013\Projects\BitArrayDemo\BitArrayDemo\obj\Debug\BitArrayDemo.exe
+c:\users\petar\documents\visual studio 2013\Projects\BitArrayDemo\BitArrayDemo\obj\Debug\BitArrayDemo.pdb

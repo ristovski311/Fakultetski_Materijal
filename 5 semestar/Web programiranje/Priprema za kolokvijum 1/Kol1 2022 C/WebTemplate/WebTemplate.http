@@ -1,0 +1,19 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+GET {{WebTemplate_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeBolnice' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "We help!",
+  "lokacija": "Nis",
+  "brojOdeljenja": 5,
+  "brojOsoblja": 20,
+  "brojTelefona": "06873847"
+}'

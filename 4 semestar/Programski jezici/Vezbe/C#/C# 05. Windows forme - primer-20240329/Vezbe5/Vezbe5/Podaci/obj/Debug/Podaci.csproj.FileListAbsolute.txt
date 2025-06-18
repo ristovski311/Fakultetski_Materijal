@@ -1,0 +1,6 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\Podaci\bin\Debug\Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\Podaci\bin\Debug\Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\Podaci\obj\Debug\Podaci.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\Podaci\obj\Debug\Podaci.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\Podaci\obj\Debug\Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Programski jezici\Vezbe\C#\C# 05. Windows forme - primer-20240329\Vezbe5\Vezbe5\Podaci\obj\Debug\Podaci.pdb

@@ -1,0 +1,17 @@
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\bin\Debug\OOP.Podaci.dll.config
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\bin\Debug\OOP.Podaci.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\bin\Debug\OOP.Podaci.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.csproj.GenerateResource.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\bin\Debug\OOP.Podaci.dll.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\bin\Debug\OOP.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\bin\Debug\OOP.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.Podaci\obj\Debug\OOP.Podaci.pdb

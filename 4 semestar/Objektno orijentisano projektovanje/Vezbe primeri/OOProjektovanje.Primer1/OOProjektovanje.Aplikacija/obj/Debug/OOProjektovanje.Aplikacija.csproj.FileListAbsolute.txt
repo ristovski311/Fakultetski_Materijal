@@ -1,0 +1,16 @@
+C:\Users\LenovoT440\Desktop\OOProjektovanje\OOProjektovanje1\OOProjektovanje1\bin\Debug\OOProjektovanje.Aplikacija.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Aplikacija.exe.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Aplikacija.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Aplikacija.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Extensions.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Extensions.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\bin\Debug\OOProjektovanje.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje1.FormGlavna.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.csproj.CopyComplete
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.exe
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Aplikacija\obj\Debug\OOProjektovanje.Aplikacija.pdb

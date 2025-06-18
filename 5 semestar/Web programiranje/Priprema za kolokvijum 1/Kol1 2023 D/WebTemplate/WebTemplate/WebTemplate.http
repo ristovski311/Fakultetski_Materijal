@@ -1,0 +1,29 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeProizvoda' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "Hleb",
+  "identifikator": "5234567890123",
+  "datumProizvodnje": "2024-11-08T19:47:23.271Z",
+  "rokTrajanja": "2025-01-08T19:47:23.271Z"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeProdavnice' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "Marioneta",
+  "adresa": "Dunavska 52",
+  "brojTelefona": "892375",
+  "imeZaduzenogLica": "Dusan Draganovic"
+}'

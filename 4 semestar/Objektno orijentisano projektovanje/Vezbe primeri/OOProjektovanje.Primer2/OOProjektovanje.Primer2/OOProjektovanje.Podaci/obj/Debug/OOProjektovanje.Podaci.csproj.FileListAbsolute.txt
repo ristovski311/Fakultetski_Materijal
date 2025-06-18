@@ -1,0 +1,11 @@
+C:\Users\LenovoT440\Desktop\Nastava\OOProjektovanje\OOProjektovanje.Primer1\OOProjektovanje.Podaci\bin\Debug\OOProjektovanje.Podaci.dll
+C:\Users\LenovoT440\Desktop\Nastava\OOProjektovanje\OOProjektovanje.Primer1\OOProjektovanje.Podaci\bin\Debug\OOProjektovanje.Podaci.pdb
+C:\Users\LenovoT440\Desktop\Nastava\OOProjektovanje\OOProjektovanje.Primer1\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.csprojResolveAssemblyReference.cache
+C:\Users\LenovoT440\Desktop\Nastava\OOProjektovanje\OOProjektovanje.Primer1\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.dll
+C:\Users\LenovoT440\Desktop\Nastava\OOProjektovanje\OOProjektovanje.Primer1\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer2\OOProjektovanje.Primer2\OOProjektovanje.Podaci\bin\Debug\OOProjektovanje.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer2\OOProjektovanje.Primer2\OOProjektovanje.Podaci\bin\Debug\OOProjektovanje.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer2\OOProjektovanje.Primer2\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer2\OOProjektovanje.Primer2\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer2\OOProjektovanje.Primer2\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer2\OOProjektovanje.Primer2\OOProjektovanje.Podaci\obj\Debug\OOProjektovanje.Podaci.pdb

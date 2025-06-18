@@ -1,0 +1,45 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodajStudenta' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "indeks": 1115,
+  "ime": "Test",
+  "prezime": "Testic",
+  "godinaRodjenja": 2002,
+  "zavrsenaSrednjaSkola": "SkolaTest"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodajFakultet' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "Faks3",
+  "adresa": "Adr3",
+  "brojTelefona": "12347",
+  "email": "faks3@mail.com"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/UpisiNaSmer/3/3/ri/2020-12-09T12%3A47%3A08.893Z/80' \
+  -H 'accept: */*' \
+  -d ''
+
+###
+
+curl -X 'GET' \
+  'https://localhost:7080/Ispit/PronadjiStudente/ri/2022-12-09T13%3A08%3A46.147Z/2024-12-09T13%3A08%3A46.147Z' \
+  -H 'accept: */*'
+
+###
+

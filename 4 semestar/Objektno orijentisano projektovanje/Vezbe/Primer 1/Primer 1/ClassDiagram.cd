@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Fakultet">
+    <Position X="0.75" Y="0.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>FAAEAIgEAECAAAAAABAAAAAABAQAAAAAAAAAgAUAAAA=</HashCode>
+      <FileName>Fakultet.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="instanca" />
+      <Field Name="odseci" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Odsek">
+    <Position X="8.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAgAABAAAAAAAAAABBAIAAAAgAAAAAAAAgCAAAAAAAA=</HashCode>
+      <FileName>Odsek.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="studenti" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Predmet">
+    <Position X="1.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAABAAAAAAAAgAABAAAAAAAAIAEAAAAAAAAAAAABA=</HashCode>
+      <FileName>Predmet.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Student">
+    <Position X="8.5" Y="4.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAEBMAQAAEEAEABhAAAAAAAAAQAAAAABAACAIEAIA=</HashCode>
+      <FileName>Student.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="odsek" />
+      <Field Name="predmeti" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

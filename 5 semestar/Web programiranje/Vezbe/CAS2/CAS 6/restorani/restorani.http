@@ -1,0 +1,156 @@
+@restorani_HostAddress = http://localhost:5010
+
+POST {{restorani_HostAddress}}/Grad/DodajGrad
+Content-Type: application/json
+Accept: application/json
+
+{
+  "naziv": "Nis",
+  "povrsina": 12345,
+  "brojStanovnika": 123456
+}
+
+###
+
+GET {{restorani_HostAddress}}/Grad/PreuzmiGradXML/Nis
+Accept: application/xml
+
+###
+
+GET {{restorani_HostAddress}}/Grad/PreuzmiGrad/Nis
+Accept: application/json
+
+###
+
+GET {{restorani_HostAddress}}/Grad/PreuzmiGradCijaImenaPocinjuSa/N
+
+###
+
+GET {{restorani_HostAddress}}/Grad/GradoviInfo
+Accept: application/json
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/VratiRestoran/1
+
+###
+
+POST {{restorani_HostAddress}}/Restoran/DodajRestoran/1/Italijanska
+Content-Type: application/json
+Accept: application/json
+
+{
+  "x": 31,
+  "y": 53,
+  "naziv": "Bellisimo",
+  "zbirOcena": 0,
+  "brojOcena": 0,
+  "prihodi": 0,
+  "rashodi": 0
+}
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/PreuzmiRestoraneUBlizini/31.0001/52.9921/5000/Italijanska
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/PreuzmiRestoraneUBlizini/31.0001/52.9921/5000
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/PreuzmiRestoranGrada/1
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/NajbliziRestoran/31.0002/52.9991
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/VratiMeniRestorana/1
+
+###
+
+POST {{restorani_HostAddress}}/Restoran/OcenjivanjeRestorana/1/10
+Accept: application/json
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/VratiTipoveRestorana
+Accept: application/json
+
+###
+
+GET {{restorani_HostAddress}}/Restoran/VratiRestoraneTipova?tip=Italijanska
+Accept: application/json
+
+###
+
+POST {{restorani_HostAddress}}/Sastojak/DodavanjeSastojka
+Content-Type: application/json
+Accept: application/json
+
+{
+  "naziv": "Brasno",
+  "rokTrajanja": "2029-12-21T00:00:00.000Z",
+  "cena": 120
+}
+
+###
+
+POST {{restorani_HostAddress}}/Sastojak/DodavanjeSastojka
+Content-Type: application/json
+Accept: application/json
+
+{
+  "naziv": "Kvasac",
+  "rokTrajanja": "2029-12-25T00:00:00.000Z",
+  "cena": 320
+}
+
+###
+
+POST {{restorani_HostAddress}}/Sastojak/DodavanjeSastojkaMagacinuRestorana/1/1/100000
+Accept: application/json
+
+###
+
+POST {{restorani_HostAddress}}/Sastojak/DodavanjeSastojkaMagacinuRestorana/1/2/200
+Accept: application/json
+
+###
+
+POST {{restorani_HostAddress}}/Meni/DodavanjeJela/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "jelo": {
+    "naziv": "Pica",
+    "slika": "Slika.png",
+    "kalorijskaVrednost": 1281,
+    "daLiJeJelo": true
+  },
+  "sastojci": [
+    {
+      "idSastojka": 1,
+      "kolicina": 100
+    },
+    {
+      "idSastojka": 2,
+      "kolicina": 20
+    }
+  ]
+}
+
+###
+
+DELETE {{restorani_HostAddress}}/Meni/ObrisatiJelo/3
+Accept: application/json
+
+###
+
+GET {{restorani_HostAddress}}/Meni/NarucivanjeJela/3
+Accept: application/json
+
+###

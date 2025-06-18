@@ -1,0 +1,33 @@
+.class1
+{
+    background-color: burlywood;
+}
+
+p
+{
+    background-color: orange; 
+    border: 2px double black;
+}
+
+h1,h3
+{
+    background-color: brown;
+}
+
+h1
+{
+    border: 3px solid black;
+}
+
+.K1
+{
+    color: blue;
+}
+.K2
+{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#ID1
+{
+    color: chartreuse;
+}

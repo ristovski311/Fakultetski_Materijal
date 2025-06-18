@@ -1,0 +1,6 @@
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Extensions\bin\Debug\OOProjektovanje.Extensions.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Extensions\bin\Debug\OOProjektovanje.Extensions.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Extensions\obj\Debug\OOProjektovanje.Extensions.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Extensions\obj\Debug\OOProjektovanje.Extensions.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Extensions\obj\Debug\OOProjektovanje.Extensions.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\OOProjektovanje.Primer1\OOProjektovanje.Extensions\obj\Debug\OOProjektovanje.Extensions.pdb

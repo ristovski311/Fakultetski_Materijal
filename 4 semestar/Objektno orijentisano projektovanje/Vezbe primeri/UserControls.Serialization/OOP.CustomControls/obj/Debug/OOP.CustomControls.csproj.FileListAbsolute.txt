@@ -1,0 +1,31 @@
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.CustomControls.dll.config
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.CustomControls.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.CustomControls.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.Podaci.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.Podaci.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.Podaci.dll.config
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csprojAssemblyReference.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.CtrlDodajOsobu.resources
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.CtrlPodaciOOsobi.resources
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.Properties.Resources.resources
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.GenerateResource.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.CoreCompileInputs.cache
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.CopyComplete
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.dll
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.pdb
+C:\Users\Aleksandar\Desktop\OOProj\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.CtrlNovaKontrola.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.CustomControls.dll.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.CustomControls.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.CustomControls.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.Podaci.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.Podaci.pdb
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\bin\Debug\OOP.Podaci.dll.config
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.AssemblyReference.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.CtrlDodajOsobu.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.CtrlPodaciOOsobi.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.Properties.Resources.resources
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.GenerateResource.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.CoreCompileInputs.cache
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.csproj.CopyComplete
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.dll
+C:\Users\risto\OneDrive\Desktop\Knjige fax\4 semestar\Objektno orijentisano projektovanje\Vezbe primeri\UserControls.Serialization\OOP.CustomControls\obj\Debug\OOP.CustomControls.pdb

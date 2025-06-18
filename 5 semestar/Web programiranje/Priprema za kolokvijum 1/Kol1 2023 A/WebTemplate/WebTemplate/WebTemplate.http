@@ -1,0 +1,35 @@
+@WebTemplate_HostAddress = http://localhost:5215
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeAutora' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "ime": "Jack",
+  "prezime": "Santos",
+  "datumRodjenja": "1965-12-08T18:20:46.881Z",
+  "pol": "M"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeIzdavackeKuce' \
+  -H 'accept: */*' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "id": 0,
+  "naziv": "IK4",
+  "drzava": "Greece"
+}'
+
+###
+
+curl -X 'POST' \
+  'https://localhost:7080/Ispit/DodavanjeKnjige/1/2/Moja%20biografija/2009-12-08T18%3A24%3A06.753Z/100/Biografija/11111111' \
+  -H 'accept: */*' \
+  -d ''
+
+###
+
