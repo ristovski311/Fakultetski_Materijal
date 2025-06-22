@@ -11,6 +11,7 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -50,12 +51,11 @@
 
         <!-- Content section 1-->
         <section id="omeni">
-            <div class="container px-sm-3">
-                <!-- <h1 class="p-3 display-1 text-decoration-bold my-5 mx-sm-5 mx-0 border-start border-primary border-5 rounded">O meni</h1> -->
-                <h1 class="text-center mt-4 mb-4 mb-md-0 p-3 mx-2 fw-bold rounded bg-primary text-white">O meni</h1>
-                <div class="row gx-5 px-sm-5 container align-items-center">
+            <div class="container-md container-fluid px-md-3 my-5">
+                <h1 class="text-center my-lg-5 my-3 p-3 mx-2 fw-bold rounded bg-primary text-white">O meni</h1>
+                <div class="row my-lg-3 my-5 gx-lg-5 px-sm-5 px-3 align-items-center">
 
-                    <div class="col-lg-6 p-sm-5 p-2 my-lg-5 my-0 container order-lg-1 align-items-start">
+                    <div class="col-lg-6 col-12 p-lg-5 p-0 order-lg-1">
                         
                             <h3 class="border-start border-secondary border-5 ps-2 fw-bold">Ja sam Nikola!</h3>
                             <p class="lead" style="text-align: justify;">
@@ -83,7 +83,7 @@
                         
                     </div>
 
-                    <div class="col-lg-6 d-none d-lg-block order-lg-2">
+                    <div class="col-lg-6 col-12 d-none d-lg-block order-lg-2">
                         <img class="displayImage img-fluid" src="assets/img/LapTop_With_Fox.png" alt="Fox" />
                     </div>
 
@@ -94,10 +94,10 @@
 
         <!-- Content section 2-->
         <section id="interesovanja">
-            <div class="container px-sm-5">
+            <div class="container-md container-fluid px-md-3 my-5">
                 <h1 class="text-center p-3 text-decoration-bold rounded bg-primary text-white">Interesovanja</h1>
                 <div class="container px-sm-3 my-sm-5">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="row row-cols-1 my-lg-5 my-3 row-cols-lg-3 row-cols-md-2 g-4">
                         
                         <div class="col">
                         <div class="card interesovanja-cards h-100">
@@ -151,28 +151,274 @@
         </section>
 
         <!-- Content section 3-->
-        <section id="projekti">
-            <div class="container'fluid px-2">
-                <h1 class="text-center p-3 text-decoration-bold rounded bg-danger text-white">Super kontroverzna tier lista programskih jezika!</h1>
-                <div class="p3 m2">
-                    
+        <section id="tierlista">
+            <div class="container-fluid px-2 py-5 my-5 bg-danger">
+                <h1 class="text-center p-3 mb-md-5 mb-3 text-decoration-bold rounded bg-primary text-white">Moja tier lista programskih jezika!</h1>
+                <div class="p3 m2 container-md container-fluid px-md-5">
+                    <table class="table table-bordered text-center align-middle text-white p-2 ">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Tier</th>
+                                <th>Programming Language</th>
+                            </tr>
+                        </thead>
+                        <tbody class="fw-bold">
+                            <tr>
+                                <td rowspan="2" class="bg-info fs-3">A</td>
+                                <td>C++</td>
+                            </tr>
+                            <tr><td>C#</td></tr>
+
+                            <tr>
+                            <td rowspan="2" class="bg-success fs-3">B</td>
+                            <td>JavaScript</td>
+                            </tr>
+                            <tr><td>Java</td></tr>
+
+                            <tr>
+                            <td rowspan="1" class="bg-warning fs-3">C</td>
+                            <td>C</td>
+                            </tr>
+
+                            <tr>
+                            <td rowspan="2" class="bg-secondary fs-3">D</td>
+                            <td>TypeScript</td>
+                            </tr>
+                            <tr><td>Python</td></tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
         
         <!-- Content section 4-->
         <section id="projekti">
-            <div class="container px-5">
-                <h1 class="text-center p-3 text-decoration-bold rounded bg-primary text-white">Projekti</h1>
-                <div class="row gx-5 align-items-center">
-                    
+            <div class="container-md container-fluid px-md-3 my-5">
+                <h1 class="text-center p-3 my-md-3 my-2 text-decoration-bold rounded bg-primary text-white">Projekti</h1>
+                <nav>
+                    <div class="nav nav-tabs my-2" id="nav-tab" role="tablist">
+                        <button class="nav-link active" id="nav-ttt-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-ttt" type="button" role="tab" aria-controls="nav-ttt"
+                        aria-selected="true">
+                            Tic Tac Toe
+                        </button>
+
+                        <button class="nav-link" id="nav-nhat-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-nhat" type="button" role="tab" aria-controls="nav-nhat"
+                        aria-selected="true">
+                            Nhat
+                        </button>
+
+                        <button class="nav-link" id="nav-faid-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-faid" type="button" role="tab" aria-controls="nav-faid"
+                        aria-selected="true">
+                            Faid
+                        </button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <!-- TIC TAC TOE NAV -->
+                    <div class="tab-pane fade show active p-3" id="nav-ttt" role="tabpanel" aria-labelledby="nav-ttt-tab">
+                        <h2 class="fw-bold border-start border-primary border-5 p-3">Tic Tac Toe
+                            <br/><small class="text-success fw-normal">Završena lokalna verzija.</small>
+                            <br/><small class="text-danger fw-normal">Multiplayer verzija u izradi.</small></h2>
+                        <div class="row p-lg-3">
+                            <div class="col-lg-5 order-2 text-center text-lg-start d-flex align-items-center">
+                                <p class="lead py-3 px-2">Tic Tac Toe je projekat u kom sam po prvi put radio podosta sa html, css i javascript.
+                                                <br>Projekat je veoma jednostavan i služio mi je kao dobra osnova za dalje učenje ovih
+                                                tehnologija.
+                                                <br>Trenutno je završena lokalna verzija, što znači da se može igrati na jednom uređaju između dva igrača.
+                                                <br>Prilagođen je i za igru na manjim uređajima!
+                                                <br>Moguća je promena boja igrača, a tu je i praćenje rezultata!
+                                                <br>Dostupan je na <span class="fw-bold">github-u</span>: <a href="https://github.com/ristovski311/Projects/tree/main/TicTacToe" class="text-success">Tic Tac Toe</a>
+                                                
+                                </p>
+                            </div>
+                            <div class="col-lg-7 order-1 px-0 d-flex align-items-center">
+                                <div id="carouselTTT" class="carousel slide w-100 py-3" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        <button type="button" data-bs-target="#carouselTTT" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img src="assets/img/ttt_imgs/1.png" class="d-block w-100" alt="First image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/ttt_imgs/2.png" class="d-block w-100" alt="Second image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/ttt_imgs/3.png" class="d-block w-100" alt="Third image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/ttt_imgs/4.png" class="d-block w-100" alt="Forth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/ttt_imgs/5.png" class="d-block w-100" alt="Fifth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/ttt_imgs/6.png" class="d-block w-100" alt="Sixth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/ttt_imgs/7.png" class="d-block w-100" alt="Seventh image">
+                                        </div>
+
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTTT" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTTT" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NHAT NAV -->
+                    <div class="tab-pane fade p-3" id="nav-nhat" role="tabpanel" aria-labelledby="nav-nhat-tab">
+                        <h2 class="fw-bold border-start border-primary border-5 p-3">Nhat
+                            <br/><small class="text-danger fw-normal">Još uvek u izradi...</small>
+                        </h2>
+                        <div class="row p-lg-3">
+                            <div class="col-lg-5 order-2 text-center text-lg-start d-flex align-items-center">
+                                <p class="lead py-3 px-2">Nhat je dobio naziv igrom reči mog imena i reči chat.
+                                                <br>Radeći na ovoj aplikaciji učio sam korišćenje websocket-a, kroz realizaciju chat aplikacije.
+                                                <br>Ovo je projekat koji sam relativno skoro započeo i još uvek sadrži samo primitivne funkcionalnosti.
+                                                <br>Prilagođen je i mobilnim uređajima!
+                                                <br>Pogledajte na <span class="fw-bold">github-u</span>: <a href="https://github.com/ristovski311/Projects/tree/main/Nhat" class="text-success">Nhat</a>
+                                                
+                                </p>
+                            </div>
+                            <div class="col-lg-7 order-1 px-0 d-flex align-items-center">
+                                <div id="carouselNhat" class="carousel slide w-100 py-3" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselNhat" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselNhat" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselNhat" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselNhat" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carouselNhat" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img src="assets/img/nhat_imgs/1.png" class="d-block w-100" alt="First image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/nhat_imgs/2.png" class="d-block w-100" alt="Second image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/nhat_imgs/3.png" class="d-block w-100" alt="Third image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/nhat_imgs/4.png" class="d-block w-100" alt="Forth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/nhat_imgs/5.png" class="d-block w-100" alt="Fifth image">
+                                        </div>
+
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselNhat" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselNhat" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAID NAV -->
+                    <div class="tab-pane fade p-3" id="nav-faid" role="tabpanel" aria-labelledby="nav-faid-tab">
+                        <h2 class="fw-bold border-start border-primary border-5 p-3">Faid<br/><small class="text-info">Abandoned.</small></h2>
+                        <div class="row p-lg-3">
+                            <div class="col-sm-9 order-2 text-center d-flex align-items-start">
+                                <p class="lead py-3 px-2">Tic Tac Toe je projekat u kom sam po prvi put radio podosta sa html, css i javascript.
+                                                <br>Projekat je veoma jednostavan i služio mi je kao dobra osnova za dalje učenje ovih
+                                                tehnologija.
+                                                <br>Trenutno je završena lokalna verzija, što znači da se može igrati na jednom uređaju između dva igrača.
+                                                <br>Prilagođen je i za igru na manjim uređajima!
+                                                <br>Moguća je promena boja igrača, a tu je i praćenje rezultata!
+                                                <br>Dostupan je na <span class="fw-bold">github-u</span>: <a href="https://github.com/ristovski311/Projects/tree/main/TicTacToe" class="text-success">Tic Tac Toe</a>
+                                                
+                                </p>
+                            </div>
+                            <div class="col-sm-3 order-1 px-0 d-flex align-items-center">
+                                <div id="carouselFaid" class="carousel slide w-100 py-3" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                        <button type="button" data-bs-target="#carouselFaid" data-bs-slide-to="8" aria-label="Slide 9"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                        <img src="assets/img/faid_imgs/1.jpg" class="d-block w-100" alt="First image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/2.jpg" class="d-block w-100" alt="Second image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/3.jpg" class="d-block w-100" alt="Third image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/4.jpg" class="d-block w-100" alt="Forth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/5.jpg" class="d-block w-100" alt="Fifth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/6.jpg" class="d-block w-100" alt="Sixth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/7.jpg" class="d-block w-100" alt="Seventh image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/8.jpg" class="d-block w-100" alt="Eighth image">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <img src="assets/img/faid_imgs/9.jpg" class="d-block w-100" alt="Ninth image">
+                                        </div>
+
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFaid" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFaid" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </section>
 
         <!-- Footer-->
         <footer class="py-5 bg-black">
-            <div class="container px-5"><p class="m-0 text-center text-white small">Copyright &copy; Your Website 2023</p></div>
+            <div class="container px-5 text-center">
+                <p class="m-0 text-white small">Copyright &copy; Ristovski Nikola 2025</p>
+                <a href="https://github.com/ristovski311">
+                    <i class="bi bi-github text-white fs-3 mt-2"></i>
+                </a>
+            </div>
         </footer>
         
         <!-- Bootstrap core JS-->
