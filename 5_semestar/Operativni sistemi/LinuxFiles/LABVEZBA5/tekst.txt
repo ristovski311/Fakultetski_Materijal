@@ -1,0 +1,8 @@
+Korišćenjem programskog jezika C 
+napisati UNIX/Linux program koji 
+svom procesu detetu korišćenjem redova 
+poruka identifikovan brojem 12002 prosleđuje 
+celobrojne vrednosti veće od nule koje čita sa tastature. 
+Poruke su tipa 3. Proces dobijene vrednosti upisuje u datoteku izlaz.txt. 
+Komunikacija se 
+prekida kada korisnik sa tastature unese broj 787.

@@ -1,0 +1,3 @@
+Korišćenjem programskog jezika C napisati Linux program koji prima dva argumenta, 
+prvi argument je tekuće ime fajla dok je drugi argument novo ime fajla. 
+Koristeći execl komandu promeniti ime prosleđenog fajla.

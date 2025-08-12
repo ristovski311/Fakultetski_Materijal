@@ -1,0 +1,3 @@
+Korišćenjem programskog jezika C kreirati Linux program koji kreira dodatni proces. 
+Zadatak roditeljskog procesa i procesa deteta je da u datoteku čije se ime zadaje kao argument komandne linije upišu redom brojeve od 1 do 20, 
+pri čemu neparne brojeve upisuje proces roditelj, a parne proces dete.
