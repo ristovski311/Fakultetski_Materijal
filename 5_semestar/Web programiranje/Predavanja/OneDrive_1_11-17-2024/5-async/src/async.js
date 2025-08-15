@@ -3,7 +3,7 @@ async function getRandomNumber() {
     setTimeout(() => {
       const number = Math.ceil(Math.random() * 10);
       resolve(number);
-    }, 500);
+    }, 1000);
   });
 }
 
@@ -15,10 +15,14 @@ async function getAsyncArray() {
   return n;
 }
 
-console.log("brojevi " + (await getAsyncArray()));
+(async () => {
+  const seq = getAsyncArray(); // start sequential
+  const par = Promise.all([
+    getRandomNumber(),
+    getRandomNumber(),
+    getRandomNumber()
+  ]); // start parallel
 
-Promise.all([getRandomNumber(), getRandomNumber(), getRandomNumber()]).then(
-  (array) => {
-    console.log("brojevi u paraleli " + array);
-  }
-);
+  console.log("brojevi " + (await seq));   // wait for sequential
+  console.log("brojevi u paraleli " + (await par)); // wait for parallel
+})();
