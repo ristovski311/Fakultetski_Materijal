@@ -1,0 +1,5 @@
+Tasty Map je aplikacija zasnovana na preporukama jela i pica na razlicitim lokacijama na mapi.
+Korisnici imaju mogucnost da dodaju neku hranu ili pice sa neke lokacije, bilo da je to restoran, pekara ili street food, a na taj nacin skupljaju poene za napredovanje rank-a.
+Moguce je dodati i recenzije na datu stavku u vidu preporuka ili kritika, kao i ocenu (0-5 zvezdica) i tako dodatno ostvariti poene.
+Korisnik dobija notifikaciju o najnovijim stavkama koje su ostali korisnici dodali,
+mogucnost filtriranja, sortiranja po razlicitim karakteristikama jela i pica (posna, italijanska, kuvano jelo itd.)...
