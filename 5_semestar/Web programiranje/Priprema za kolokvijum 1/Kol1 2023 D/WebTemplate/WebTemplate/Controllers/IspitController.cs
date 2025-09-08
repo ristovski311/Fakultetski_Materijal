@@ -18,9 +18,9 @@ public class IspitController : ControllerBase
         {
             await Context.Proizvodi.AddAsync(p);
             await Context.SaveChangesAsync();
-            return Ok($"Uspesno dodat proizvod {p.Naziv}!");
+            return Ok(p);
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }
@@ -35,7 +35,7 @@ public class IspitController : ControllerBase
             await Context.SaveChangesAsync();
             return Ok($"Uspesno dodat prodavnica {p.Naziv}!");
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }
@@ -49,24 +49,31 @@ public class IspitController : ControllerBase
             Prodavnica? p = await Context.Prodavnice.FindAsync(idProdavnice);
             Proizvod? pr = await Context.Proizvodi.FindAsync(idProizvoda);
 
-            if(p == null)
+            if (p == null)
                 return BadRequest("Ne postoji prodavnica!");
-            if(pr == null)
+            if (pr == null)
                 return BadRequest("Ne postoji proizvod!");
 
             Artikal a = new Artikal()
             {
                 Proizvod = pr,
                 Prodavnica = p,
-                Cena = cena
+                Cena = cena,
+                Kolicina = 10
             };
 
             await Context.Artikli.AddAsync(a);
             await Context.SaveChangesAsync();
 
-            return Ok($"Dodat artikal: {pr.Naziv} u prodavnici {p.Naziv}");
+            return Ok(new
+            {
+                pr.ID,
+                pr.Naziv,
+                pr.RokTrajanja,
+                cena
+            });
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }
@@ -81,15 +88,15 @@ public class IspitController : ControllerBase
         try
         {
             var prodavnica = await Context.Prodavnice.FindAsync(idProdavnice);
-            if(prodavnica == null)
+            if (prodavnica == null)
                 return BadRequest("Ne postoji prodavnica!");
-                
+
             var proizvod = await Context.Proizvodi.FindAsync(idProizvoda);
-            if(proizvod == null)
+            if (proizvod == null)
                 return BadRequest("Ne postoji proizovd!");
             var artikal = await Context.Artikli.Where(p => p.Prodavnica == prodavnica && p.Proizvod == proizvod).FirstOrDefaultAsync();
 
-            if(artikal == null)
+            if (artikal == null)
                 return BadRequest("Prodavnica ne sadrzi taj proizvod!");
 
             double staraCena = artikal.Cena;
@@ -103,7 +110,7 @@ public class IspitController : ControllerBase
 
             return Ok($"Promenjen artikal {proizvod.Naziv} u prodavnici {prodavnica.Naziv}\n Cena: {staraCena} -> {artikal.Cena}\nKolicina {staraKolicina} -> {artikal.Kolicina}");
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }
@@ -115,29 +122,29 @@ public class IspitController : ControllerBase
         try
         {
             var prodavnica = await Context.Prodavnice.FindAsync(idProdavnice);
-            if(prodavnica == null)
+            if (prodavnica == null)
                 return BadRequest("Ne postoji prodavnica!");
-                
+
             var proizvod = await Context.Proizvodi.FindAsync(idProizvoda);
-            if(proizvod == null)
+            if (proizvod == null)
                 return BadRequest("Ne postoji proizovd!");
 
             var artikal = await Context.Artikli.Where(p => p.Prodavnica == prodavnica && p.Proizvod == proizvod).FirstOrDefaultAsync();
 
-            if(artikal == null)
+            if (artikal == null)
                 return BadRequest("Prodavnica ne sadrzi taj proizvod!");
 
-            if(artikal.Kolicina < kolicina)
-                return BadRequest("Nedovoljno proizvoda za zeljenu kupovinu!");
+            if (artikal.Kolicina < kolicina)
+                return BadRequest($"Nedovoljno proizvoda za zeljenu kupovinu! {kolicina} a artikal {artikal.Kolicina} {artikal.Proizvod.ID} {artikal.Prodavnica.ID}");
 
             artikal.Kolicina -= kolicina;
 
             Context.Artikli.Update(artikal);
-            await Context.SaveChangesAsync();            
+            await Context.SaveChangesAsync();
 
-            return Ok($"Obavljena kupovina {proizvod.Naziv} u kolicini: {kolicina}! Ostalo je jos {artikal.Kolicina} proizvoda u prodavnizi {prodavnica.Naziv}");
+            return Ok("Uspesno");
         }
-        catch(Exception e)
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }
@@ -151,13 +158,68 @@ public class IspitController : ControllerBase
 
             var result = await Context.Artikli.Where(p => idProdavnica.Contains(p.Prodavnica.ID))
                                                 .Where(p => p.Proizvod.RokTrajanja < datumIsteka)
-                                                .Include(p=>p.Proizvod)
-                                                .Select(p=>p.Proizvod)
+                                                .Include(p => p.Proizvod)
+                                                .Select(p => p.Proizvod)
                                                 .ToListAsync();
 
             return Ok(result);
         }
-        catch(Exception e)
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("SveProdavnice")]
+    public async Task<IActionResult> SveProdavnice()
+    {
+        try
+        {
+            var prodavnice = await Context.Prodavnice.ToListAsync();
+            return Ok(prodavnice);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("SviProizvodi")]
+    public async Task<IActionResult> SviProizvodi()
+    {
+        try
+        {
+            var proizvodi = await Context.Proizvodi.ToListAsync();
+            return Ok(proizvodi);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
+    }
+
+    [HttpGet("ProizvodiIzProdavnice/{idProdavnice}")]
+    public async Task<IActionResult> ProizvodiIzProdavnice(int idProdavnice)
+    {
+        try
+        {
+            var prodavnica = await Context.Prodavnice.FindAsync(idProdavnice);
+            if (prodavnica == null)
+                return BadRequest("Ne postoji prodavnica sa id " + idProdavnice);
+
+            var artikli = await Context.Artikli.Where(a => a.Prodavnica.ID == idProdavnice)
+                                            .Include(a => a.Proizvod).ToListAsync();
+
+            return Ok(artikli.Select(a => new
+            {
+                ProizvodID = a.Proizvod.ID,
+                ProizodNaziv = a.Proizvod.Naziv,
+                a.Cena,
+                a.Kolicina,
+                a.Proizvod.RokTrajanja
+            }));
+        }
+        catch (Exception e)
         {
             return BadRequest(e.Message);
         }

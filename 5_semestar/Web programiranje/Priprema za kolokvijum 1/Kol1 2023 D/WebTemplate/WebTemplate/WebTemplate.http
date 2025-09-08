@@ -1,29 +1,72 @@
-@WebTemplate_HostAddress = http://localhost:5215
+@WebTemplate_HostAddress = https://localhost:7080
 
-###
+### Dodavanje proizvoda
+POST {{WebTemplate_HostAddress}}/Ispit/DodavanjeProizvoda
+accept: */*
+Content-Type: application/json
 
-curl -X 'POST' \
-  'https://localhost:7080/Ispit/DodavanjeProizvoda' \
-  -H 'accept: */*' \
-  -H 'Content-Type: application/json' \
-  -d '{
+{
   "id": 0,
   "naziv": "Hleb",
   "identifikator": "5234567890123",
   "datumProizvodnje": "2024-11-08T19:47:23.271Z",
   "rokTrajanja": "2025-01-08T19:47:23.271Z"
-}'
+}
 
 ###
 
-curl -X 'POST' \
-  'https://localhost:7080/Ispit/DodavanjeProdavnice' \
-  -H 'accept: */*' \
-  -H 'Content-Type: application/json' \
-  -d '{
+### Dodavanje prodavnice
+POST {{WebTemplate_HostAddress}}/Ispit/DodavanjeProdavnice
+accept: */*
+Content-Type: application/json
+
+{
   "id": 0,
   "naziv": "Marioneta",
   "adresa": "Dunavska 52",
   "brojTelefona": "892375",
   "imeZaduzenogLica": "Dusan Draganovic"
-}'
+}
+
+###
+
+### Dodavanje artikla
+POST {{WebTemplate_HostAddress}}/Ispit/DodavanjeArtikla/2/1/120
+accept: */*
+
+###
+
+### Izmena proizvoda (cena i količina)
+PUT {{WebTemplate_HostAddress}}/Ispit/IzmenaProizvoda/1/1/150/20
+accept: */*
+
+###
+
+### Kupovina proizvoda
+PUT {{WebTemplate_HostAddress}}/Ispit/KupovinaProizvoda/1/1/5
+accept: */*
+
+###
+
+### Dohvatanje isteklih proizvoda
+GET {{WebTemplate_HostAddress}}/Ispit/Istekli?datumIsteka=2025-01-01T00:00:00&idProdavnica=2
+accept: */*
+
+###
+
+### Vraćanje svih prodavnica
+GET {{WebTemplate_HostAddress}}/Ispit/SveProdavnice
+accept: */*
+
+###
+
+### Vraćanje svih proizvoda iz konkretne prodavnice
+GET {{WebTemplate_HostAddress}}/Ispit/ProizvodiIzProdavnice/2
+accept: */*
+
+
+###
+
+### Vraćanje svih proizvoda
+GET {{WebTemplate_HostAddress}}/Ispit/SviProizvodi
+accept: */*

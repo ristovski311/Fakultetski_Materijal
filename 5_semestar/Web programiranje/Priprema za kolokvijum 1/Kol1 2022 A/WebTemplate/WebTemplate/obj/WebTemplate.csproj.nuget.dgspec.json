@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\risto\\OneDrive\\Desktop\\Knjige fax\\5 semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj": {}
+    "C:\\gitHub\\Fakultetski_Materijal\\5_semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj": {}
   },
   "projects": {
-    "C:\\Users\\risto\\OneDrive\\Desktop\\Knjige fax\\5 semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj": {
+    "C:\\gitHub\\Fakultetski_Materijal\\5_semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\risto\\OneDrive\\Desktop\\Knjige fax\\5 semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj",
+        "projectUniqueName": "C:\\gitHub\\Fakultetski_Materijal\\5_semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj",
         "projectName": "WebTemplate",
-        "projectPath": "C:\\Users\\risto\\OneDrive\\Desktop\\Knjige fax\\5 semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj",
+        "projectPath": "C:\\gitHub\\Fakultetski_Materijal\\5_semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\WebTemplate.csproj",
         "packagesPath": "C:\\Users\\risto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\risto\\OneDrive\\Desktop\\Knjige fax\\5 semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\obj\\",
+        "outputPath": "C:\\gitHub\\Fakultetski_Materijal\\5_semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2022 A\\WebTemplate\\WebTemplate\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

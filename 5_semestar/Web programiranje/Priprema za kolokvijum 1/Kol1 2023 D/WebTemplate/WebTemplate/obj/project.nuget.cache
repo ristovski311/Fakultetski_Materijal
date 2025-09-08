@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6TntD7ldxFle7KvSozIHavZ8QZkVj1jNRheMv1YyBeOmWG41+UkXq15uzG76AdwnCtVEscz9vSfw+QeV9q4Sjg==",
+  "dgSpecHash": "eN1JX82ebVNwDMldFljqXl6+xSr5JgiQJu9rQMM7WfC5k6YSNhm0Tmqo6MZAIycnPuI9t1VSu+ChP8vvSgEchg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\risto\\OneDrive\\Desktop\\Knjige fax\\5 semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2023 D\\WebTemplate\\WebTemplate\\WebTemplate.csproj",
+  "projectFilePath": "C:\\gitHub\\Fakultetski_Materijal\\5_semestar\\Web programiranje\\Priprema za kolokvijum 1\\Kol1 2023 D\\WebTemplate\\WebTemplate\\WebTemplate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\risto\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\risto\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
