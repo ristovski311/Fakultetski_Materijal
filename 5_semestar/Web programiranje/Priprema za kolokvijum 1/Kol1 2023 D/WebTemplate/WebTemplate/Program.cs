@@ -1,35 +1,37 @@
+using Microsoft.EntityFrameworkCore;
 using WebTemplate.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
-builder.Services.AddControllers();
-
-
+// Dodaj DbContext
 builder.Services.AddDbContext<IspitContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("ProizvodiCS"));
 });
 
+// Dodaj kontrolere
+builder.Services.AddControllers();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Swagger (opciono za dev)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
-app.MapControllers();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
-app.UseCors("CORS");
-
 app.UseHttpsRedirection();
+
+// 🚀 Globalni CORS – važi za sve zahteve i kontrolere
+app.UseCors(policy =>
+    policy.AllowAnyOrigin()
+          .AllowAnyMethod()
+          .AllowAnyHeader()
+);
 
 app.UseAuthorization();
 

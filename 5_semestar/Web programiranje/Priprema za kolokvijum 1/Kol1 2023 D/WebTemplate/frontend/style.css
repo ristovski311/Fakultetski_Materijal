@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+.forma-div {
+    width: 300px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    max-height: 200px;
+}
+
+.polja-div {
+    width: 100%;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.naziv-div,
+.sifra-div,
+.istek-div,
+.kolicina-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+label {
+    width: 60px;
+}
+
+input, select {
+    flex: 1;
+}
+
+button {
+    width: 100%;
+    margin: 2px;
+}
+
+h2, h4, h5 {
+    text-align: center;
+    margin: 5px;
+}
+
+.prodavnice-div {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 300px);
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.prodavnica-container {
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+
+.content-prodavnice-div {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.forma-prodavnice-div {
+    width: 200px;
+    border: 1px solid black;
+}
+
+.sadrzaj-prodavnice-div {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.proizvod-div {
+    border: 1px solid black;
+    min-width: 100px;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.istekao {
+    color: red;
+}
+
+.nije-istekao {
+    color: green;
+}
