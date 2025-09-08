@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odeca</title>
+</head>
+<body>
+    <h1>Odeca!!!</h1>
+    <form action="./cgi-bin/odeca.cgi" method="post">
+        <p>Sta generise ova forma? Ovo je oktobar 2022</p>
+        <p>Izaberite boju majice:</p>
+        <p>
+            <select name="boja" size="3" multiple>
+                <option value="bela">Bela</option>
+                <option value="crna">Crna</option>
+                <option value="crvena">Crvena</option>
+            </select>
+        </p>
+        <p>
+            Velicina:
+            <br> <input type="radio" name="vel" value="xl"> xl
+            <br> <input type="radio" name="vel" value="l"> l
+            <br> <input type="radio" name="vel" value="m"> m
+            <br> <input type="radio" name="vel" value="s"> s
+        </p>
+        <p>
+            Kolicina:
+            <p>
+                <input type="text" name="kolicina" value="1">
+            </p>
+            <p>
+                <input type="submit" value="Submit order">
+            </p>
+        </p>
+    </form>
+</body>
+</html>
