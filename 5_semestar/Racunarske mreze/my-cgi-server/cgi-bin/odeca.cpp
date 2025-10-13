@@ -16,7 +16,7 @@ void parse(string str)
 
     if(boja_pos_1 == string::npos)
     {
-        error("Error, niste uneli boju!");
+        error("Error, niste uneli boju! " + str);
         return;
     } 
 
@@ -24,7 +24,7 @@ void parse(string str)
 
     if(velicina_pos == string::npos)
     {
-        error("Error, niste uneli velicinu!");
+        error("Error, niste uneli velicinu! " + str);
         return;
     } 
 
@@ -32,7 +32,7 @@ void parse(string str)
 
     if(kolicina_pos == string::npos)
     {
-        error("Error, niste uneli kolicinu!");
+        error("Error, niste uneli kolicinu! " + str);
         return;
     }
 
@@ -40,7 +40,7 @@ void parse(string str)
 
     if(boja_pos_2 != string::npos)
     {
-        error("Error, nemamo trenutno na stanju!");
+        error("Error, nemamo trenutno na stanju! " + str);
         return;
     }
 
@@ -60,18 +60,20 @@ void parse(string str)
     }
     catch(const std::exception& e)
     {
-        error("Error, invalid kolicina entered!");
+        error("Error, invalid kolicina entered! " + str );
         return;
     }
     
     if(kol_val_int == 2 && boja_val == "bela")
     {
         cout << "<html><head><title>USPESNO</title></head><body><h1>" << "Uspesno ste porucili 2 bele majice velicine " << vel_val;
-        cout << "</h1></body></html>\n";
+        cout << "</h1><hr/><h4>" << str;
+		
+		cout << "</h4></body></html>\n";
     }
     else
     {
-        error("Nemamo trenutno na stanju!");
+        error("Nemamo trenutno na stanju 1! " + str);
     }
 
 

@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>esus pomogy</title>
+</head>
+<body>
+    <h1>Izaberite</h1>
+    <form action="./cgi-bin/clothes.cgi">
+        <p>
+            Tip
+            <select name="tip" size="3" multiple method="post">
+                <option>polo majica</option>
+                <option>pantalone</option>
+                <option>sorc</option>
+            </select>
+        </p>
+        <p>
+            Velicina
+            <p>
+                S
+                <input type="radio" checked name="velicina" value="s">
+            </p>
+            <p>
+                M
+                <input type="radio" name="velicina" value="m">
+            </p>
+            <p>
+                L
+                <input type="radio" name="velicina" value="l">
+            </p>
+        </p>
+        <p>
+            Kolicina
+            <input type="text" name="kolicina" value="1">
+        </p>
+        <input type="submit" value="Naruci">
+    </form>
+</body>
+</html>
