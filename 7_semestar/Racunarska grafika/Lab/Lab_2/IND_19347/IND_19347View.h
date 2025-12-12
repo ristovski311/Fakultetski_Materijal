@@ -12,6 +12,11 @@ protected: // create from serialization only
 	DECLARE_DYNCREATE(CIND19347View)
 	CRect grid;
 	bool show_grid;
+	float cactus_angle;
+	float cactus_part_angle;
+	HENHMETAFILE mf_dark_part;
+	HENHMETAFILE mf_light_part;
+	CRect initialMetafileRectangle;
 
 // Attributes
 public:
@@ -23,6 +28,11 @@ public:
 // Overrides
 public:
 	void ShowGrid(CDC* pdc);
+	void Translate(CDC* pdc, float dX, float dY, bool rightMultiply);
+	void Scale(CDC* pdc, float sX, float sY, bool rightMultiply);
+	void Rotate(CDC* pdc, float angle, bool rightMultiply);
+	void DrawFigure(CDC* pdc);
+
 	virtual void OnDraw(CDC* pDC);  // overridden to draw this view
 	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 protected:
