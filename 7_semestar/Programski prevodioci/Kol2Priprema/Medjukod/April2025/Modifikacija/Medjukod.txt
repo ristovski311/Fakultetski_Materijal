@@ -1,0 +1,22 @@
+
+
+
+
+id = e
+
+    IMC<e>
+    Load_Mem R1, Result<e>
+    Store R1, id.name
+
+id +-*/= e
+
+    IMC<e>
+    Load_Mem R1, Result<e>
+    Load_Mem R2, id.name
+    [
+        Add R2, R1
+        Mul R2, R1
+        Sub R2, R1
+        Div R2, R1
+    ]
+    Store R1, id.name

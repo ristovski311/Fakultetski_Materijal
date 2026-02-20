@@ -1,0 +1,102 @@
+terminal POINT, LPAR, RPAR;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer INTCONST;
+terminal String STRCONST;
+terminal Double REALCONST;
+
+non terminal Type Izraz;
+non terminal Variable Promenljiva;
+
+//GRAMATIKA
+
+CONST ::= INTCONST:i
+{:
+    Type t = parser.symbolTable.getType("integer");
+    RESULT = new Constant(t,i);
+:}
+| STRCONST:s
+{:
+    Type t = parser.symbolTable.getType("char");
+    RESULT = new Constant(t,s);
+:}
+| REALCONST:r
+{:
+    //Mora da se u klasi Type doda public static int REAL = 4;
+    //I da se u SymbolTable konstr. doda type = new Type("real", Type.REAL, type);
+    Type t = parser.symbolTable.getType("real");
+    RESULT = new Constant(t,r); 
+:};
+
+
+//Podrazumevamo da postoji u Type klasi:
+//Type.INT Type.REAL Type.STRING Type.ARRAY Type.STRUCT
+
+Promenljiva ::= ID:i
+{:
+    Variable v = parser.symbolTable.getVar(i);
+    if(v != null)
+        RESULT = v;
+:}
+| ID:id POINT Promenljiva:p 
+{:
+    Variable v = parser.symbolTable.getVar(id);
+    if(v != null)
+    {
+        if(v.type.tkind != Type.STRUCT)
+        {
+            //Pravilo 1
+            System.out.println("Mora ID biti struktura");
+        }
+        else
+        {
+            //Pravilo 2
+            //Mora da se doda nova StructVar koja nasledjuje Variable:
+            //Ta klasa ce imati dodatno polje Variable fields; 
+            //Ovaj pokazivac ukazivace na prvo polje ove strukture
+            //S obzirom da SymbolNode vec sadrzi SymbolNode next, preko njega mozemo pristupati
+            //Sledecem polju strukture
+
+            Variable field = v.field;
+            while(field != null)
+            {
+                if(p.name.equals(field.name))
+                {
+                    break;
+                }
+            }
+            if(field == null)
+            {
+                System.out.println("Mora promenljiva p biti polje strukture ID");
+            }
+            RESULT = field;
+        }
+    }
+:}
+| ID:id LPAR Izraz:iz RPAR
+{:
+    Variable v = parser.symbolTable.getVar(id);
+    if(v != null)
+    {
+        if(v.type.tkind != Type.ARRAY)
+        {
+            //Pravilo 3
+            System.out.println("Mora tip da bude array");
+        }
+    }
+    //Pravilo 4
+    if(iz.tkind != Type.INT)
+    {
+        System.out.println("Mora izraz u [] biti int");
+    }
+:};
+
+
+Izraz ::= Promenljiva:p
+{:
+    RESULT = p;
+:}
+| CONST:c
+{:
+    RESULT = c;
+:};

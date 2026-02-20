@@ -1,0 +1,27 @@
+
+
+
+
+while (e1 e2 e3 ... en) s1 s2 s3 ... sm
+
+
+
+
+startLab:
+    IMC<e1>
+    Load_Mem R1, Result<e1>
+    JumpIfZero R1, endLab
+    IMC<e2>
+    Load_Mem R1, Result<e2>
+    JumpIfZero R1, endLab
+    ...
+    IMC<en>
+    Load_Mem R1, Result<en>
+    JumpIfZero R1, endLab
+    IMC<s1>
+    IMC<s2>
+    IMC<s3>
+    ...
+    IMC<sm>
+    Jump startLab
+endLab:

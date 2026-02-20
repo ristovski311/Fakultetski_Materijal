@@ -1,0 +1,79 @@
+//import sekcija
+//LAB3
+
+import java_cup.runtime.*;
+import java.io.*;
+
+parser code {:
+    public static void main(String[] args)
+    {
+        try{
+            FileReader file = new FileReader(args[0]);
+            Scanner scanner = new MPLexer(file);
+            MPParser parser = new MPParser(scanner);
+            parser.parse(); 
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+:};
+
+terminal MAIN, INT, REAL, BOOLEAN, IF, ELIF, ELSE, ID, CONST, ASSIGN;
+terminal LESS, LESSOREQUAL, EQUAL, NOTEQUAL, MORE, MOREOREQUAL;
+terminal LEFTPAR, RIGHTPAR, LEFTCURLYBR, RIGHTCURLYBR, COLON, SEMICOLON;
+
+non terminal Program, Block, Variables, Statements, Variable, Type;
+non terminal Statement, Assignment, IfStatement, RelExpression, ElsePart;
+non terminal ElifList, ElseStatement, Elif, Term, RelOp;
+
+//Gramatika
+
+Program ::= MAIN LEFTPAR RIGHTPAR Block {:System.out.println( "Redukcija 1: Program ::= main ( ) Block" );:};
+
+Block ::= LEFTCURLYBR Variables Statements RIGHTCURLYBR {:System.out.println( "Redukcija 2: Block ::= { Variables Statements }" );:};
+
+Variables ::= Variables Variable {:System.out.println( "Redukcija 3: Variables ::= Variables Variable" );:}
+            | Variable {:System.out.println( "Redukcija 4: Variables ::= Variable" );:};
+
+Variable ::= Type ID SEMICOLON {:System.out.println( "Redukcija 5: Variable ::= Type ID" );:};
+
+Type ::= INT {:System.out.println( "Redukcija 6: Type ::= INT" );:}
+        | REAL {:System.out.println( "Redukcija 7: Type ::= REAL" );:}
+        | BOOLEAN {:System.out.println( "Redukcija 8: Type ::= BOOLEAN" );:};
+
+Statements ::= Statements SEMICOLON Statement {:System.out.println( "Redukcija 9: Statements ::= Statements ; Statement" );:}
+        | Statement {:System.out.println( "Redukcija 10: Statements ::= Statement" );:};
+
+Statement ::= Assignment {:System.out.println( "Redukcija 11: Statement ::= Assignment" );:}
+            | IfStatement {:System.out.println( "Redukcija 12: Statement ::= IfStatement" );:};
+
+IfStatement ::= IF LEFTPAR RelExpression RIGHTPAR COLON Block ElsePart {:System.out.println( "Redukcija 13: IfStatement ::= if (RelExpression) : Block ElsePart" );:};
+
+ElsePart ::= ElifList ElseStatement {:System.out.println( "Redukcija 14: ElsePart ::= ElifList ElseStatement" );:}
+            | ElifList {:System.out.println( "Redukcija 15: ElsePart ::= ElifList" );:}
+            | ElseStatement {:System.out.println( "Redukcija 16: ElsePart ::= ElseStatement" );:}
+            | {:System.out.println( "Redukcija 17: ElsePart ::= Epsilon" );:};
+
+ElifList ::= ElifList Elif {:System.out.println( "Redukcija 18: ElifList ::= ElifList Elif" );:}
+            | Elif {:System.out.println( "Redukcija 19: ElifList ::= Elif" );:};
+
+Elif ::= ELIF LEFTPAR RelExpression RIGHTPAR COLON Block {:System.out.println( "Redukcija 20: Elif ::= elif(RelExpression) : Block" );:};
+
+ElseStatement ::= ELSE COLON Block {:System.out.println( "Redukcija 21: ElseStatement ::= else : Block" );:};
+
+RelExpression ::= Term RelOp Term {:System.out.println( "Redukcija 22: RelExpression ::= Term RelOp Term" );:}
+            | Term {:System.out.println( "Redukcija 23: RelExpression ::= Term" );:};
+
+Term ::= ID {:System.out.println( "Redukcija 24: Term ::= ID" );:}
+            | CONST {:System.out.println( "Redukcija 25: Term ::= CONST" );:};
+
+RelOp ::= LESS {:System.out.println( "Redukcija 26: RelOp ::= <" );:}
+            | LESSOREQUAL {:System.out.println( "Redukcija 27: RelOp ::= <=" );:}
+            | EQUAL {:System.out.println( "Redukcija 28: RelOp ::= ==" );:}
+            | NOTEQUAL {:System.out.println( "Redukcija 29: RelOp ::= <>" );:}
+            | MORE {:System.out.println( "Redukcija 30: RelOp ::= >" );:}
+            | MOREOREQUAL {:System.out.println( "Redukcija 31: RelOp ::= >=" );:};
+
+Assignment ::= ID ASSIGN Term {:System.out.println( "Redukcija 32: Assignment ::= ID := Term" );:};

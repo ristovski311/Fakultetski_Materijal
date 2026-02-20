@@ -1,0 +1,24 @@
+
+
+
+
+s if e
+
+    IMC<e>
+    Load_Mem R1, Result<e>
+    JumpIfZero R1, endLabel
+    IMC<s>
+endLabel:
+
+
+ili
+
+s unless e
+
+    IMC<e>
+    Load_Mem R1, Result<e>
+    JumpIfNotZero R1, endLabel
+    IMC<s>
+endLabel:
+
+

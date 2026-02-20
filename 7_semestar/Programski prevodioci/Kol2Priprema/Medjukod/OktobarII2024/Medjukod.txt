@@ -1,0 +1,31 @@
+
+
+
+
+select
+    when e1 => s1 or
+    when e2 => s2 or
+    ...
+    when en => sn
+end
+
+
+    IMC<e1>
+    Load_Mem R1, Result<e1>
+    JumpIfZero label1
+    IMC<s1>
+    Jump endLabel
+label1:
+    IMC<e2>
+    Load_Mem R1, Result<e2>
+    JumpIfZero label2
+    IMC<s2>
+    Jump endLabel
+label2:
+    ...
+labeln:
+    IMC<en>
+    Load_Mem R1, Result<en>
+    JumpIfZero endLabel
+    IMC<sn>
+endLabel:

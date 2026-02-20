@@ -1,0 +1,345 @@
+//import sekcija
+//LAB4
+
+import java_cup.runtime.*;
+import java.io.*;
+import java.util.*;
+
+import SymbolTable.*;
+
+parser code {:
+	public int warnNo = 0;
+	public int errNo = 0;
+	SymbolTable symbolTable;
+    public static void main(String[] args)
+    {
+        try{
+            FileReader file = new FileReader(args[0]);
+            java_cup.runtime.Scanner scanner = new MPLexer(file);
+            MPParser parser = new MPParser(scanner);
+            parser.parse();
+			System.err.println("Analiza zavrsena. \nBroj upozorenja u kodu: " + parser.warnNo + "\nBroj gresaka u kodu: " + parser.errNo);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+	public void checkScopeWarnings(int level) 
+	{
+    	SymbolNode current = symbolTable.getVariables();
+    	while (current != null) 
+		{
+        	Variable var = (Variable) current;
+        
+        	// Proveravamo samo promenljive nivoa koji se upravo zatvara
+        	if (var.level == level) 
+			{
+            	if (var.last_def == -1 && var.last_use == -1) 
+				{
+                	System.err.println("Upozorenje: promenljiva " + var.name + " je deklarisana ali nema vrednost. [" + level + "]");
+                	warnNo++;
+            	}
+            	else if (var.last_def > var.last_use) 
+				{
+                	System.err.println("Upozorenje: promenljiva " + var.name + " ima vrednost koja se ne koristi. [" + level + "]");
+                	warnNo++;
+            	}
+        		current = current.next;
+        	}
+			else
+				break;
+    	}
+	}
+
+	public void syntax_error(Symbol cur_token)
+	{
+
+	}
+	public int getLine()
+	{
+		return ((MPLexer) getScanner()).getLine();
+	}	
+:};
+
+init with {:
+	symbolTable = new SymbolTable();
+:}
+
+terminal Integer INTCONST;
+terminal Double REALCONST;
+terminal Boolean BOOLCONST;
+terminal String ID;
+
+terminal MAIN, INT, REAL, BOOLEAN, IF, ELIF, ELSE, ASSIGN;
+terminal LESS, LESSOREQUAL, EQUAL, NOTEQUAL, MORE, MOREOREQUAL;
+terminal LEFTPAR, RIGHTPAR, LEFTCURLYBR, RIGHTCURLYBR, COLON, SEMICOLON;
+
+non terminal Type Type;
+non terminal Type Term;
+non terminal Type RelExpression;
+non terminal Constant Konstanta;
+
+non terminal Program, Block, Variables, Statements, Variable;
+non terminal Statement, Assignment, IfStatement, ElsePart;
+non terminal ElifList, ElseStatement, Elif, RelOp;
+
+//Gramatika
+
+Program ::= MAIN LEFTPAR RIGHTPAR Block {:System.out.println( "Redukcija 1: Program ::= main ( ) Block" );:};
+
+
+
+
+Block ::= LEFTCURLYBR {: parser.symbolTable.enterScope(); :}
+		 Variables 
+		 Statements 
+		 RIGHTCURLYBR {: parser.checkScopeWarnings(parser.symbolTable.getCurrentLevel()); parser.symbolTable.exitScope(); :}
+		 {:
+			System.out.println( "Redukcija 2: Block ::= { Variables Statements }" );
+		 :};
+
+
+
+
+
+Variables ::= Variables Variable {:System.out.println( "Redukcija 3: Variables ::= Variables Variable" );:}
+            | Variable {:System.out.println( "Redukcija 4: Variables ::= Variable" );:};
+
+
+
+
+
+Variable ::= Type:t ID:ime SEMICOLON 
+								{:
+										System.out.println( "Redukcija 5: Variable ::= Type ID" );
+										if(!parser.symbolTable.addVar(ime, t))
+										{
+											System.err.println("Greska u liniji:" + parser.getLine() + ": " + "Promenljiva " + ime + " je vec deklarisana!");
+											parser.errNo++;
+										}
+								:};
+
+
+
+
+Type ::= INT 
+			{:
+				RESULT = parser.symbolTable.getType("int");
+				System.out.println( "Redukcija 6: Type ::= INT" );
+			:}
+        | REAL 
+        	{:
+				RESULT = parser.symbolTable.getType("real");
+				System.out.println( "Redukcija 7: Type ::= REAL" );
+			:}
+        | BOOLEAN 
+        		{:
+					RESULT = parser.symbolTable.getType("boolean");
+					System.out.println( "Redukcija 8: Type ::= BOOLEAN" );
+				:};
+        
+        
+        
+
+Statements ::= Statements SEMICOLON Statement {:System.out.println( "Redukcija 9: Statements ::= Statements ; Statement" );:}
+        | Statement {:System.out.println( "Redukcija 10: Statements ::= Statement" );:};
+
+Statement ::= Assignment {:System.out.println( "Redukcija 11: Statement ::= Assignment" );:}
+            | IfStatement {:System.out.println( "Redukcija 12: Statement ::= IfStatement" );:};
+
+
+
+
+
+IfStatement ::= IF LEFTPAR RelExpression:re RIGHTPAR COLON Block ElsePart 
+																	{:
+																		if(re.tkind != Type.BOOLEAN) 
+																		{
+            																System.err.println("Greska u liniji " + parser.getLine() + ": Uslov u IF naredbi mora biti boolean!");
+            																parser.errNo++;
+        																}
+																		System.out.println( "Redukcija 13: IfStatement ::= if (RelExpression) : Block ElsePart" );
+																	:};
+
+
+
+
+
+ElsePart ::= ElifList ElseStatement {:System.out.println( "Redukcija 14: ElsePart ::= ElifList ElseStatement" );:}
+            | ElifList {:System.out.println( "Redukcija 15: ElsePart ::= ElifList" );:}
+            | ElseStatement {:System.out.println( "Redukcija 16: ElsePart ::= ElseStatement" );:}
+            | {:System.out.println( "Redukcija 17: ElsePart ::= Epsilon" );:};
+
+
+ElifList ::= ElifList Elif {:System.out.println( "Redukcija 18: ElifList ::= ElifList Elif" );:}
+            | Elif {:System.out.println( "Redukcija 19: ElifList ::= Elif" );:};
+
+
+
+
+
+Elif ::= ELIF LEFTPAR RelExpression:re RIGHTPAR COLON Block 
+														{:
+															if(re.tkind != Type.BOOLEAN) 
+															{
+        													    System.err.println("Greska u liniji " + parser.getLine() + ": Uslov u ELIF naredbi mora biti boolean!");
+        										   				parser.errNo++;
+      														}
+															System.out.println( "Redukcija 20: Elif ::= elif(RelExpression) : Block" );
+														:};
+
+
+
+
+
+
+ElseStatement ::= ELSE COLON Block {:System.out.println( "Redukcija 21: ElseStatement ::= else : Block" );:};
+
+
+
+
+
+RelExpression ::= Term:t1 RelOp Term:t2 
+								{:
+									boolean t1Num = (t1.tkind == Type.INTEGER || t1.tkind == Type.REAL);
+        							boolean t2Num = (t2.tkind == Type.INTEGER || t2.tkind == Type.REAL);
+
+									if(!t1Num || !t2Num)
+									{
+										System.err.println("Greska u liniji: " + parser.getLine() + " : Relacioni operatori se mogu primeniti samo nad numerickim podacima!");
+										parser.errNo++;
+										RESULT = parser.symbolTable.getType("unknown");
+									}
+									else
+									{
+										RESULT = parser.symbolTable.getType("boolean");
+									}
+									System.out.println( "Redukcija 22: RelExpression ::= Term RelOp Term" );
+								:}
+            | Term:t 
+            		{:
+						if(t.tkind != Type.BOOLEAN)
+						{
+							RESULT = parser.symbolTable.getType("unknown");
+							System.err.println( "Greska u liniji: " + parser.getLine() + " : Uslov mora biti boolean tipa!" );
+							parser.errNo++;
+						}
+						else
+						{
+							RESULT = parser.symbolTable.getType("boolean");
+						}
+						System.out.println( "Redukcija 23: RelExpression ::= Term" );
+					:};
+
+
+
+
+
+Term ::= ID:ime
+			{:
+				Variable var = parser.symbolTable.getVar(ime);
+				if(var == null)
+				{
+					System.err.println("Greska u liniji: " + parser.getLine() + " : promenljiva " + ime + " nije deklarisana.");
+					RESULT = parser.symbolTable.getType("unknown");
+					parser.errNo++;
+				} 
+				else 
+				{
+					if(!var.isInitialized)
+					{
+						System.err.println("Greska u liniji " + parser.getLine() + ": Promenljiva '" + ime + "' nije inicijalizovana.");
+                		parser.errNo++;
+					}
+					var.last_use = parser.getLine();
+					RESULT = var.type;
+				}
+				System.out.println( "Redukcija 24: Term ::= ID" );
+			:}
+       	| Konstanta:k
+       				{:
+						RESULT = k.type;
+						System.out.println( "Redukcija 25: Term ::= Konstanta" );
+					:};
+
+
+
+            
+Konstanta ::= INTCONST:c 
+						{:
+							System.out.println( "Redukcija konstante: Konstanta ::= INTCONST" );
+							RESULT = new Constant(parser.symbolTable.getType("int"), c);
+						:}
+			| BOOLCONST:c 
+						{:
+							System.out.println( "Redukcija konstante: Konstanta ::= BOOLCONST" );
+							RESULT = new Constant(parser.symbolTable.getType("boolean"), c);
+						:}
+			| REALCONST:c 
+						{:
+							System.out.println( "Redukcija konstante: Konstanta ::= REALCONST" );
+							RESULT = new Constant(parser.symbolTable.getType("real"), c);
+						:};
+
+
+			
+RelOp ::= LESS {:System.out.println( "Redukcija 26: RelOp ::= <" );:}
+            | LESSOREQUAL {:System.out.println( "Redukcija 27: RelOp ::= <=" );:}
+            | EQUAL {:System.out.println( "Redukcija 28: RelOp ::= ==" );:}
+            | NOTEQUAL {:System.out.println( "Redukcija 29: RelOp ::= <>" );:}
+            | MORE {:System.out.println( "Redukcija 30: RelOp ::= >" );:}
+            | MOREOREQUAL {:System.out.println( "Redukcija 31: RelOp ::= >=" );:};
+
+
+
+
+Assignment ::= ID:ime ASSIGN Term:t 
+							{:
+
+								Variable var = parser.symbolTable.getVar(ime);
+								if(var == null)
+								{
+									System.err.println("Greska u liniji: " + parser.getLine() + " : promenljiva " + ime + " nije deklarisana.");
+									parser.errNo++;
+								} 
+								else 
+								{
+									var.last_def = parser.getLine();
+									
+									boolean compatible = false;
+
+									if(var.type.tkind == t.tkind)
+									{
+										compatible = true;
+									}
+									// Nizi u visi tip sme! int sme u real
+									else if(var.type.tkind == Type.REAL && t.tkind == Type.INTEGER)
+									{
+										compatible = true;
+										System.err.println("Izvrsena implicitna konverzija iz INT u REAL!");
+									}
+
+									if(compatible)
+									{
+										
+               							var.isInitialized = true;
+									}
+									else
+									{
+										System.err.println("Greska u liniji " + parser.getLine() + ": Nekompatibilni tipovi u dodeli za '" + ime + "'.");
+                						parser.errNo++;
+									}
+								}
+
+								System.out.println( "Redukcija 32: Assignment ::= ID := Term" );
+							:};
+							
+							
+							
+							
+							
+							
+							
+							

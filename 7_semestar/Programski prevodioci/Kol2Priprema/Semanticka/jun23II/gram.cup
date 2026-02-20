@@ -1,0 +1,82 @@
+terminal LBR, RBR, COL, COMMA;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer INTC;
+terminal Double REALC;
+terminal String STRC;
+
+non terminal ArrayList<Par> Object;
+non terminal ArrayList<Par> Members;
+non terminal Par Pair;
+
+//Gramatika
+
+CONST ::= INTC:ic
+{:
+    Type t = parser.symbolTable.getType("integer");
+    RESULT = new Constant(t, ic);
+:}
+| REALC:rc
+{:
+    //Type: public static int REAL = 4;
+    //ST konkstr: type = new Type("real", Type.REAL, type);
+    Type t = parser.symbolTable.getType("real");
+    RESULT = new Constant(t, rc);
+:}
+| STRC:sc
+{:
+    Type t = parser.symbolTable.getType("char");
+    RESULT = new Constant(t, sc);
+:};
+
+
+Pair ::= ID:i COL CONST:c
+{:
+    RESULT = new Par(i, c);
+:}
+| ID:i COL Object:o
+{:
+    RESULT = new Par(i, o);
+:}
+| ID:id1 COL ID:id2
+{:
+    RESULT = new Par(id1, id2);
+:};
+
+
+Members ::= Pair:p
+{:
+    RESULT = new ArrayList<Par>();
+    RESULT.add(p);
+:}
+| Members:m COMMA Pair:p
+{:
+    for(Par par : m)
+    {
+        if(m.id.equals(m.id))
+        {
+            //Pravilo 1
+            System.out.println("Ne sme se ponavljati u jednoj member listi isti id");
+        }
+    }
+
+    if(p.val_id != null)
+    {
+        boolean found = false;
+        for(Par par : m)
+        {
+            if(par.id.equals(p.val_id))
+                found = true;
+        }
+        if(!found)
+            System.out.println("Pravilo 2!")
+    }
+    m.add(p);
+    RESULT = m;
+:};
+
+
+Object ::= LBR Members:m RBR
+{:
+    RESULT = m;
+:};

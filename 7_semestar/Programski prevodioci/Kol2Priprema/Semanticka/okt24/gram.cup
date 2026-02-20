@@ -1,0 +1,73 @@
+terminal COMMA, EQUALS, LPAR, RPAR;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer INTCONST;
+terminal Double DOUBLECONST;
+terminal String STRINGCONST;
+
+non terminal ArrayList<Arg> ArgumentList;
+non terminal Arg Argument;
+non terminal Type Type;
+
+//Gramatika 
+
+CONST ::= INTCONST:ic
+{:
+    RESULT = new Constant(parser.symbolTable.getType("integer"), ic);
+:}
+| DOUBLECONST:dc
+{:
+    RESULT = new Constant(parser.symbolTable.getType("double"), dc);
+    //Type: public static int DOUBLE = 4;
+    //ST konstruktor: type = new Type("double", Type.DOUBLE, type);
+:}
+| STRINGCONST:sc
+{:
+    RESULT = new Constant(parser.symbolTable.getType("char"),sc);
+:};
+
+Type ::= Type:t LPAR RPAR
+{:
+    RESULT = t;
+:}
+| ID:tip
+{:
+    //Pravilo 1
+    Type t = parser.symbolTable.getType(tip);
+    if(t == null)
+        System.out.println("Nepostojeci tip");
+    RESULT = t;
+:};
+
+
+Argument ::= Type:t ID:i
+{:
+    RESULT = new Arg(i, t);
+:}
+| Type:t ID:i EQUALS CONST:c
+{:
+    RESULT = new Arg(t, c, i);
+:};
+
+
+ArgumentList ::= Argument:a 
+{:
+    RESULT = new ArrayList<>();
+    RESULT.add(a);
+:}
+| ArgumentList:al COMMA Argument:a
+{:
+    for(Arg arg : al)
+    {
+        if(al.name.equals(a.name))
+            //Pravilo 2
+            System.out.println("Ne sme 2 ista id");
+    }
+
+    //Pravilo 3
+    if(a.value == null && al.get(al.size()-1).value != null)
+        System.out.println("Podrazumevane samo na kraj!");
+
+    al.add(a);
+    RESULT = al;
+:};

@@ -1,0 +1,76 @@
+terminal Type TYPE;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer INTCONST;
+terminal Float REALCONST;
+terminal String STRINCONST;
+terminal EQUALS, LPAR, RPAR, LBR, RBR, COMMA;
+
+non terminal VarDecl;
+non terminal ArrayList<Constant> ConstList;
+
+// GRAMATIKA
+
+CONST ::= INTCONST:i
+{:
+    Type t = parser.symbolTable.getType("integer");
+    RESULT = new Constant(t,i);
+:}
+| STRINGCONST:s
+{:
+    Type t = parser.symbolTable.getType("char");
+    RESULT = new Constant(t,s);
+:}
+| REALCONST:r
+{:
+    //Mora da se doda real u type
+    Type t = parser.symbolTable.getType("real");
+    RESULT = new Constant(t,r);
+:};
+
+
+ConstList ::= ConstList:list COMMA CONST:c
+{:
+    list.add(c);
+    RESULT = list;
+:}
+| CONST:c
+{:
+    RESULT = new ArrayList<Constant>();
+    RESULT.add(c);
+:};
+
+VarDecl ::= TYPE:t ID:i EQUALS CONST:c
+{:
+    //Pravilo 1
+    if(!parser.symbolTable.addVar(i, t))
+        System.out.println("Mora ID biti jedinstven");
+
+    //Pravilo 2
+    if(t.tkind != c.type.tkind)
+        System.out.println("Mora isti tip skalar");
+:}
+| TYPE:t ID:i LPAR RPAR EQUALS LBR ConstList:list RBR
+{:
+    //Pravilo 1
+    if(!parser.symbolTable.addVar(i, t))
+        System.out.println("Mora ID biti jedinstven");
+
+    Constant firstConstant = list.get(0);
+
+    //Pravilo 2
+    if(t.tkind != firstConstant.type.tkind)
+        System.out.println("Mora isti tip skalar");
+
+    //Pravilo 3
+    boolean all_same_type = true;
+    for(Constant con : list)
+    {
+        if(con.type.tking != firstConstant.type.tkind)
+            all_same_type = false;
+    }
+
+    if(!all_same_type)
+        System.out.println("Svi u listi moraju biti istog tipa!");
+
+:};

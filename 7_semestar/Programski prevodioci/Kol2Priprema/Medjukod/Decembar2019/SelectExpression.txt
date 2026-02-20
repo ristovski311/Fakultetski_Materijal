@@ -1,0 +1,29 @@
+
+select (selection, e0, e1, e2 ... en)
+
+
+    IMC<selection>
+    Load_Mem R1, Result<selection>
+    
+    Load_Const R2, 0
+    Compare_Equal R2, R1
+    JumpIfZero R2, label1
+    IMC<e0>
+    Load_Mem R3, Result<e0>
+    Jump labelEnd
+label1:
+    Load_Const R2, 1
+    Compare_Equal R2, R1
+    JumpIfZero R2, label2
+    IMC<e1>
+    Load_Mem R3, Result<e1>
+    Jump labelEnd
+    ...
+labeln:
+    Load_Const R2, n
+    Compare_Equal R2, R1
+    JumpIfZero R2, labelEnd
+    IMC<en>
+    Load_Mem R3, Result<en>
+labelEnd:
+    Store R3, Result<SelectExpression>

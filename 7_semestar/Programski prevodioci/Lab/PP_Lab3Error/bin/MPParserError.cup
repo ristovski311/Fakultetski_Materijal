@@ -1,0 +1,123 @@
+//import sekcija
+
+import java_cup.runtime.*;
+import java.io.*;
+
+parser code {:
+	public int errorNo = 0;
+    public static void main(String[] args)
+    {
+        try{
+            FileReader file = new FileReader(args[0]);
+            Scanner scanner = new MPLexer(file);
+            MPParser parser = new MPParser(scanner);
+            parser.parse(); 
+			if(parser.errorNo == 0)
+				System.out.println("Analiza gotova. Nema gresaka u kodu.");
+			else
+				System.out.println("Analiza gotova. Broj gresaka u kodu: " + parser.errorNo);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+	
+	public void syntax_error(Symbol cur_token)
+	{
+	
+	}
+	
+	public void report_error(String message, Object info)
+	{
+		System.out.println(message);
+	}
+	
+	public int getLine()
+	{
+		return ((MPLexer)getScanner()).getLine();
+	}
+	
+:};
+
+terminal MAIN, INT, REAL, BOOLEAN, IF, ELIF, ELSE, ID, CONST, ASSIGN;
+terminal LESS, LESSOREQUAL, EQUAL, NOTEQUAL, MORE, MOREOREQUAL;
+terminal LEFTPAR, RIGHTPAR, LEFTCURLYBR, RIGHTCURLYBR, COLON, SEMICOLON;
+
+non terminal Program, Block, Variables, Statements, Variable, Type;
+non terminal Statement, Assignment, IfStatement, RelExpression, ElsePart;
+non terminal ElifList, ElseStatement, Elif, Term, RelOp;
+
+//Gramatika
+
+Program ::= MAIN LEFTPAR RIGHTPAR Block
+			| MAIN LEFTPAR RIGHTPAR error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Nekorektan Block u main-u"); parser.errorNo++;:}
+			| MAIN LEFTPAR error Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali )"); parser.errorNo++;:}
+			| MAIN error RIGHTPAR Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali ()"); parser.errorNo++;:};
+
+Block ::= LEFTCURLYBR Variables Statements RIGHTCURLYBR
+			| LEFTCURLYBR Variables error RIGHTCURLYBR {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Greska u Statements"); parser.errorNo++;:}
+			| LEFTCURLYBR Variables Statements error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali }"); parser.errorNo++;:}
+			| LEFTCURLYBR error Statements RIGHTCURLYBR {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Greska u deklaraciji promenljivih"); parser.errorNo++;:};
+
+Variables ::= Variables Variable
+            | Variable;
+
+Variable ::= Type ID SEMICOLON
+			| Type ID error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali ;"); parser.errorNo++;:}
+			| Type error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Nije naveden identifikator	"); parser.errorNo++;:}
+			| error ID SEMICOLON {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Nije naveden tip podataka"); parser.errorNo++;:};
+
+Type ::= INT
+        | REAL
+        | BOOLEAN;
+		
+Statements ::= Statements SEMICOLON Statement
+		| Statements error Statement {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali ; posle Statements-a"); parser.errorNo++;:}	
+        | Statement;
+
+Statement ::= Assignment
+            | IfStatement;
+
+IfStatement ::= IF LEFTPAR RelExpression RIGHTPAR COLON Block ElsePart
+			| IF LEFTPAR RelExpression RIGHTPAR COLON error ElsePart {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali block deo u if statement-u"); parser.errorNo++;:}
+			| IF LEFTPAR RelExpression RIGHTPAR error Block ElsePart {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali :"); parser.errorNo++;:} 
+			| IF LEFTPAR error RIGHTPAR COLON Block ElsePart {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali RelExpression u zagradi"); parser.errorNo++;:}
+			| IF error RelExpression RIGHTPAR COLON Block ElsePart {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali ("); parser.errorNo++;:};
+
+ElsePart ::= ElifList ElseStatement
+            | ElifList 
+            | ElseStatement 
+            | ;
+
+ElifList ::= ElifList Elif
+            | Elif;
+
+Elif ::= ELIF LEFTPAR RelExpression RIGHTPAR COLON Block
+		| ELIF LEFTPAR RelExpression RIGHTPAR COLON error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali block deo u elif"); parser.errorNo++;:}
+		| ELIF LEFTPAR RelExpression RIGHTPAR error Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali :"); parser.errorNo++;:}
+		| ELIF LEFTPAR RelExpression error COLON Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali )"); parser.errorNo++;:}
+		| ELIF LEFTPAR error RIGHTPAR COLON Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali RelExpression"); parser.errorNo++;:}
+		| ELIF error RelExpression RIGHTPAR COLON Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali ("); parser.errorNo++;:};
+			
+ElseStatement ::= ELSE COLON Block
+				| ELSE COLON error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali blok deo else statement-a"); parser.errorNo++;:}
+				| ELSE error Block {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali :"); parser.errorNo++;:};
+
+RelExpression ::= Term RelOp Term
+			| Term RelOp error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali drugi Term"); parser.errorNo++;:}
+            | Term;
+
+Term ::= ID 
+		| CONST ;
+
+RelOp ::= LESS 
+            | LESSOREQUAL 
+            | EQUAL 
+            | NOTEQUAL 
+            | MORE 
+            | MOREOREQUAL;
+
+Assignment ::= ID ASSIGN Term 
+			| ID ASSIGN error {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali Term"); parser.errorNo++;:}
+			| ID error Term {:System.out.println("Greska u liniji " + parser.getLine() + ": " + "Fali :="); parser.errorNo++;:};

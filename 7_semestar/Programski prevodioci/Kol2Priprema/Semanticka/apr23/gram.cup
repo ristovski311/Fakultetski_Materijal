@@ -1,0 +1,69 @@
+terminal LPAR, RPAR, COMMA, COL;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer INTCONST;
+terminal String STRCONST;
+
+non terminal SlOp;
+non terminal Indices;
+non terminal ArrayList<Constant> List;
+non terminal Range;
+
+//GRAMATIKA
+
+CONST ::= INTCONST:i
+{:
+    Type t = parser.symbolTable.getType("integer");
+    RESULT = new Constant(t,i);
+:}
+| STRCONST:s
+{:
+    Type t = parser.symbolTable.getType("char");
+    RESULT = new Constant(t,s);
+:};
+
+
+Range ::= COL CONST:c1 COL CONST:c2
+{:
+    if((c1.type.tkind != Type.INTEGER) || (c2.type.tkind != Type.INTEGER))
+    {
+        //Pravilo 3
+        System.out.println("Moraju biti integeri");
+    }
+    else
+    {
+        //Pravilo 4
+        if(c1.value >= c2.value)
+        {
+            System.out.println("Prvi indeks mora biti manji od drugog");
+        }
+    }
+:}
+| COL CONST:c COL
+{:
+    if(c1.type.tkind != Type.INTEGER)
+    {
+        //Pravilo 3
+        System.out.println("Indeks mora biti integer");
+    }
+:};
+
+
+List ::= List:list COMMA CONST:c
+{:
+    //Pravilo 1
+    if(list.get(0).type.tkind != c.type.tkind)
+        System.out.println("Tipovi moraju biti isti");
+
+    //Pravilo 2
+    for(Constant con : list)
+    {
+        if(con.value == c.value)
+            System.out.println("Svi indeksi moraju biti jedinstveni");
+    }
+:}
+| CONST:c
+{:
+    RESULT = new ArrayList<Constant>();
+    RESULT.add(c);
+:}; 

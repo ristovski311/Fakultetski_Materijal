@@ -1,0 +1,83 @@
+terminal ENUM, LBR, RBR, COMMA, EQUALS;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer INTC;
+terminal Character CHRC;
+terminal Double REALC;
+
+non terminal EnumType;
+non terminal ArrayList<Element> ElementList;
+non terminal Element Element;
+
+//Gramatika:
+
+CONST ::= INTC:ic
+{:
+    Type t = parser.symbolTable.getType("integer");
+    RESULT = new Constant(t, ic);
+:}
+| REALC:rc
+{:
+    // Type: public static int REAL = 4;
+    // ST Constr: type = new Type("real", Type.REAL, type);
+    Type t = parser.symbolTable.getType("real");
+    RESULT = new Constant(t, rc);
+:}
+| CHRC:cc
+{:
+    Type t = parser.symbolTable.getType("char");
+    RESULT = new Constant(t, cc);
+:};
+
+
+Element ::= ID:i
+{:
+    RESULT = new Element(i);
+:}
+| ID:i EQUALS CONST:c
+{:
+    RESULT = new Element(i,c);
+:};
+
+
+ElementList ::= Element:e
+{:
+    RESULT = new ArrayList<Element>();
+    if(e.value == null)
+    {
+        Type t = parser.symbolTable.getType("integer");
+        e.value = new Constant(t, new Integer(0));
+    }
+    RESULT.add(e);
+:}
+| ElementList:list COMMA Element:e
+{:
+    //PRAVILO 1
+    for(Element el :list)
+    {
+        if(el.name.equals(e.name))
+            System.out.println("Duplikat imena");
+    }
+    Element lastEl = list.get(list.size()-1);
+    if(e.value == null)
+    {
+        //Mora provera tipova itd ali ovo je PRAVILO 2
+        e.value = new Constant(lastEl.value.type, new Integer(lastEl.value.value + 1));
+    }
+    else
+    {
+        for(Element el :list)
+        {
+            //PRAVILO 3
+            if(el.value == e.value)
+                System.out.println("Duplikat vrednosti");
+        }
+    }
+    list.add(e);
+    RESULT = list;
+:};
+
+
+EnumType ::= ENUM ID LBR ElementList:list RBR
+{:
+:};

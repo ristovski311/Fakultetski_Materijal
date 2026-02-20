@@ -63,7 +63,7 @@ def makePanorama(img1, img2):
     kp1, des1 = detector.detectAndCompute(img2, None) #slika i maska
     kp2, des2 = detector.detectAndCompute(img1, None)
 
-    # Koristeci BFMatcher vrsimo uparivanje feature-a
+    # Koristeci BFMatcher ili FLANNMatcher vrsimo uparivanje feature-a
     matches = match_features(des1, des2)
 
     # Prikaz match-ovanih feature-a na slikama
@@ -102,7 +102,7 @@ if __name__ == '__main__':
     img2 = loadImage("2.jpg")
     img3 = loadImage("3.jpg")
 
-    show3images(img1, img2, img3, "1", "2", "3")
+    #show3images(img1, img2, img3, "1", "2", "3")
 
     panorama23 = makePanorama(img2, img3)
     plt.imshow(panorama23)

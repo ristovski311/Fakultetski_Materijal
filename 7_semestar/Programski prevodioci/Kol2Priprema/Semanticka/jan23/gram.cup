@@ -1,0 +1,82 @@
+terminal COMMA, EQUALS, STAR;
+terminal String ID;
+terminal Constant CONST;
+terminal Integer ICONST;
+terminal String SCONST;
+terminal Double RCONST;
+
+non terminal ArrayList<Arg> ArgList;
+non terminal Arg Arg;
+non terminal Type Type;
+
+//Gramatika 
+
+CONST ::= ICONST:i
+{:
+    Type t = parser.symbolTable.getType("integer");
+    RESULT = new Constant(t, i);
+:}
+| SCONST:sc
+{:
+    Type t = parser.symbolTable.getType("char");
+    RESULT = new Constant(t, sc);
+:}
+| RCONST:rc
+{:
+    //Type: public static int REAL = 4;
+    //ST Konstr: type = new Type("real", Type.REAL, type);
+    Type t = parser.symbolTable.getType("real");
+    RESULT = new Constant(t, rc);
+:};
+
+
+Type ::= Type:t STAR
+{:
+    RESULT = t;
+:}
+| ID:i
+{:
+    Type t = parser.symbolTable.getType(i);
+    if(t == null)
+    {        
+        //Pravilo 1
+        System.out.println("NE SMES DUNESES TIP KOJI GA NEMA U ST");
+    }
+    RESULT = t;
+:};
+
+
+Arg ::= Type:t ID:i 
+{:
+    RESULT = new Arg(i, t);
+:}
+| Type:t ID:i EQUALS CONST:c
+{:
+    //Provera da li je tip isti kao const tip
+    if(t.tkind != c.type.tkind)
+        System.out.println("Tipovi se ne slagaju");
+
+    RESULT = new Arg(i, c, t);
+:};
+
+
+ArgList ::= Arg:a
+{:
+    RESULT = new ArrayList<Arg>();
+    RESULT.add(a);
+:}
+| ArgList:list COMMA Arg:a
+{:
+    //PRAVILO 1
+    for(Arg arg : list)
+    {
+        if(arg.name.equals(a.name))
+            System.out.println("NE SMES 2 ISTA ID OK?");
+    }
+
+    //PRAVILO 2
+    Arg lastArg = list.get(list.size()-1);
+    if(a.value == null && lastArg.value != null)
+        System.out.println("Brate ne smes da mesas cas ima podrazumevano cas nema");
+
+:};

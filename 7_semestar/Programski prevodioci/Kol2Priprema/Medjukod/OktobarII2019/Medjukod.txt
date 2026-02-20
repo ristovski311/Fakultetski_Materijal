@@ -1,0 +1,26 @@
+
+
+
+loop 
+    s1 
+    s2 
+    s3 
+    ... 
+    exit when e  
+    ... 
+    sn 
+end loop
+
+
+startLabel:
+    IMC<s1>
+    IMC<s2>
+    IMC<s3>
+    ...
+    IMC<e>
+    Load_Mem R1, Result<e>
+    JumpIfNotZero R1, endLabel
+    ...
+    IMC<sn>
+    Jump startLabel
+endLabel:

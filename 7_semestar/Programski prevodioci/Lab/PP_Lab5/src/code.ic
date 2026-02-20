@@ -1,0 +1,44 @@
+	Load_Const	R1, 10
+	Store		R1, prom2
+	Load_Const	R1, 35
+	Store		R1, prom3
+	Load_Const	R1, true
+	Store		R1, prom0
+	Load_Const	R1, false
+	Store		R1, prom1
+	Load_Const	R1, 10.4
+	Store		R1, prom4
+	Load_Const	R1, 4000.0
+	Store		R1, prom5
+	Load_Mem	R1, prom2
+	Load_Mem	R2, prom3
+	Compare_Greater		R1, R2
+	Store		R1, $tmp0
+	Load_Mem	R1, $tmp0
+	JumpIfZero		R1, lab2
+	Load_Const	R1, 3
+	Store		R1, var3
+	Jump		lab0
+lab2:
+	Load_Mem	R1, prom0
+	JumpIfZero		R1, lab3
+	Load_Const	R1, 3.1
+	Store		R1, prom6
+	Jump		lab0
+lab3:
+	Load_Mem	R1, prom4
+	Load_Mem	R2, prom5
+	Compare_Equal		R1, R2
+	Compare_Equal		R1, 0
+	Store		R1, $tmp1
+	Load_Mem	R1, $tmp1
+	JumpIfZero		R1, lab1
+	Load_Const	R1, 3.14
+	Store		R1, prom7
+	Jump		lab0
+lab1:
+	Load_Const	R1, 3.1415
+	Store		R1, prom8
+lab0:
+	Load_Const	R1, 4
+	Store		R1, prom2

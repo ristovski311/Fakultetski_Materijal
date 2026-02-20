@@ -1,0 +1,31 @@
+main ()
+{
+	int abcinteger1;
+	real c23realanbroj := 5.03;
+	boolean boolprom1;
+	boolprom1 := true;
+	
+	//** ja sam komentar **/
+	
+	if(c23realanbroj >= 5) :
+	{
+		boolprom1 := false;
+	} 
+	elif (c23realanbroj > 4) 
+	{
+		abcinteger1 := 10;
+	}
+	elif (boolprom1 <> 10) :
+	{
+		abcinteger1 := #20;
+	}
+	else :
+	{
+		boolprom1 := true;
+	}
+	
+	c23realanbroj := 10.E123;
+	
+	int lmninteger2 := 4#123;
+	lminteger2 := 5#519;
+}

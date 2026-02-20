@@ -1,0 +1,4 @@
+if(brzina>60):
+	brzina * brzina * 0.5
+else
+	brzina

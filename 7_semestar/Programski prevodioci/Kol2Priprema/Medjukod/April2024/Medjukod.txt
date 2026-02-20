@@ -1,0 +1,22 @@
+
+
+
+
+for id = e1 to e2 by const do s
+
+
+    IMC<e1>
+    IMC<e2>
+    Load_Mem R1, Result<e1>
+    Store R1, id.name
+startLabel:
+    Load_Mem R2, Result<e2>
+    Compare_Less R2, R1
+    JumpIfNotZero R2, endLabel
+    IMC<s>
+    Load_Mem R1, id.name
+    Load_Const R2, const.value
+    Add R1, R2
+    Store R1, id.name
+    Jump startLabel
+endLabel:

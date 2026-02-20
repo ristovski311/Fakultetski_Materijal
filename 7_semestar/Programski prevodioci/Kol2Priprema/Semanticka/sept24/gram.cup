@@ -1,0 +1,79 @@
+terminal String ID;
+terminal COMMA, EQUALS, LESS, MORE;
+terminal Constant CONST;
+terminal Integer INTCONST;
+terminal Double DOUBLECONST;
+terminal Character CHARCONST;
+
+non terminal Declaration;
+non terminal Tip Type;
+non terminal Prom Var;
+non terminal ArrayList<Tip> TypeList;
+
+Declaration ::= Type:t Var:v
+{:
+    if(!v.val.type.name.equals(t.name))
+    {
+        //Pravilo 2
+        System.out.println("Tip promenljive nije adekvatan");
+    }
+
+    //Pravilo 1
+    if(!parse.symbolTable.addVar(v.name, v.val.type.name));
+        System.out.println("Var moraju biti unikatne!");
+:};
+
+
+Type ::= ID:i
+{:
+    Type t = parser.symbolTable.getType(i);
+    if(t == null)
+        //Pravilo 3
+        System.out.println("Tip mora postojati!");
+    RESULT = new Tip()
+:}
+| ID:i LESS TypeList:tl MORE
+{:
+    //Pravilo 4:
+    //ID mora da bude genericki? Mora da znamo nekako koji su genericki?
+
+    RESULT = new Tip(i, tl);
+:};
+
+
+TypeList ::= Type:t
+{:
+    RESULT = new ArrayList<Tip>();
+    RESULT.add(t);
+:}
+| TypeList:tl COMMA Type:t 
+{:
+    tl.add(t);
+    RESULT = tl;
+:};
+
+
+Var ::= ID:i
+{:
+    RESULT = new Prom(i);
+:}
+| ID:i EQUALS CONST:c
+{:
+    RESULT = new Prom(i, c);
+:};
+
+
+CONST ::= INTCONST:c
+{:
+    RESULT = new Constant(parser.symbolTable.getType("integer"), c);
+:}
+| DOUBLECONST:c
+{:
+    RESULT = new Constant(parser.symbolTable.getType("double"), c);
+    // Type: public static int REAL = 4;
+    // ST konstruktor: type = new Type("double", Type.DOUBLE, type);
+:}
+| CHARCONST:c
+{:
+    RESULT = new Constant(parser.symbolTable.getType("char"), c);
+:};

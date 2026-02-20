@@ -1,0 +1,218 @@
+//import sekcija
+//LAB5
+
+import java_cup.runtime.*;
+import java.io.*;
+import java.util.*;
+import SymbolTable.*;
+import AST.*;
+
+
+parser code {:
+    SymbolTable symbolTable;
+:};
+
+init with {:
+	symbolTable = new SymbolTable();
+:};
+
+
+
+terminal MAIN, INT, REAL, BOOLEAN, IF, ELIF, ELSE, ASSIGN;
+terminal LESS, LESSOREQUAL, EQUAL, NOTEQUAL, MORE, MOREOREQUAL;
+terminal LEFTPAR, RIGHTPAR, LEFTCURLYBR, RIGHTCURLYBR, COLON, SEMICOLON;
+terminal Integer INTCONST;
+terminal Double REALCONST;
+terminal Boolean BOOLCONST;
+terminal String ID;
+
+non terminal Type Type;
+non terminal Constant Konstanta;
+non terminal Expression RelExpression, Term;
+non terminal Block Program, Block;
+non terminal Block Statements;
+non terminal Statement Statement;
+non terminal Assignment Assignment;
+non terminal IfStatement IfStatement, Elif, ElifList, ElsePart, ElseStatement;
+non terminal Variables, Variable;
+non terminal String RelOp;
+
+
+//Gramatika
+
+Program ::= MAIN LEFTPAR RIGHTPAR Block:b
+{:
+    RESULT = b;	
+:};
+
+Block ::= LEFTCURLYBR {: 
+            parser.symbolTable.enterScope(); 
+          :}
+          Variables Statements:s 
+          RIGHTCURLYBR
+						{:
+							parser.symbolTable.exitScope(); 
+    						RESULT = s;
+						:};
+
+Variables ::= Variables Variable 
+				| Variable;
+
+Variable ::= Type:t ID:ime SEMICOLON 
+				{:
+					parser.symbolTable.addVar(ime, t);
+				:};
+
+Type ::= INT 
+				{:
+					RESULT = parser.symbolTable.getType("int");
+				:}
+        | REAL 
+				{:
+					RESULT = parser.symbolTable.getType("real");
+				:}
+        | BOOLEAN 
+				{:
+					RESULT = parser.symbolTable.getType("boolean");
+				:};
+
+Statements ::= Statements:sts SEMICOLON Statement:s
+				{:
+					RESULT = sts;
+					RESULT.addStatement(s);
+				:}
+        | Statement : s
+				{:
+					RESULT = new Block();
+					RESULT.addStatement(s);
+				:};
+
+Statement ::= Assignment:a
+				{:
+					RESULT = a;
+				:}
+            | IfStatement:is
+				{:
+					RESULT = is;
+				:};
+
+IfStatement ::= IF LEFTPAR RelExpression:re RIGHTPAR COLON Block:b ElsePart:ep
+				{:
+					RESULT = ep;
+					RESULT.setIfCond(re);
+					RESULT.setIfBlock(b);			
+				:};
+
+ElsePart ::= ElifList:el ElseStatement:es 
+				{:
+					RESULT = el;
+					RESULT.setElseBlock(es.getElseBlock());
+				:}
+            | ElifList:el
+				{:
+					RESULT = el;
+				:}
+            | ElseStatement:es 
+				{:
+					RESULT = es;
+				:}
+            | 
+				{:
+					RESULT = new IfStatement();
+				:};
+
+ElifList ::= ElifList:el Elif:e
+				{:
+					RESULT = el;
+					RESULT.addElifPart(e.getIfCond(), e.getIfBlock());
+				:}
+            | Elif:e
+				{:
+					RESULT = new IfStatement();
+					RESULT.addElifPart(e.getIfCond(), e.getIfBlock());
+				:};
+
+Elif ::= ELIF LEFTPAR RelExpression:cond RIGHTPAR COLON Block:b
+				{:
+					RESULT = new IfStatement(cond, b);					
+				:};
+
+ElseStatement ::= ELSE COLON Block:b 
+				{:
+					RESULT = new IfStatement();
+					RESULT.setElseBlock(b);
+				:};
+
+RelExpression ::= Term:t1 RelOp:ro Term:t2
+				{:
+					if(ro.equals("=="))
+						RESULT = new EqualExpression(t1,t2);
+					else if(ro.equals("<>"))
+						RESULT = new NotEqualExpression(t1,t2);
+					else if(ro.equals(">"))
+						RESULT = new GreaterExpression(t1,t2);
+					else if(ro.equals("<"))
+						RESULT = new LessExpression(t1,t2);
+					else if(ro.equals(">="))
+						RESULT = new GreaterEqualExpression(t1,t2);
+					else if(ro.equals("<="))
+						RESULT = new LessEqualExpression(t1,t2);
+				:}
+							| Term:t
+				{:
+					RESULT = t;	
+				:};
+
+Term ::= ID:ime
+				{:
+					Variable v = parser.symbolTable.getVar(ime);
+					RESULT = new VariableExpression(v);
+				:}
+       	    | Konstanta:c 
+				{:
+					RESULT = new ConstantExpression(c);
+				:};
+
+RelOp ::= LESS 
+			{:
+				RESULT = "<";
+			:}
+            | LESSOREQUAL 
+			{:
+				RESULT = "<=";
+			:}
+            | EQUAL 
+			{:
+				RESULT = "==";
+			:}
+            | NOTEQUAL 
+			{:
+				RESULT = "<>";
+			:}
+            | MORE 
+				{:
+					RESULT = ">";
+				:}
+            | MOREOREQUAL 
+				{:
+					RESULT = ">=";
+				:};
+
+Assignment ::= ID:ime ASSIGN Term:t 
+				{:
+					Variable v = parser.symbolTable.getVar(ime);
+					RESULT = new Assignment(v, t);
+				:};
+
+Konstanta ::= INTCONST:c 
+						{:
+							RESULT = new Constant(parser.symbolTable.getType("int"), c);
+						:}
+            | BOOLCONST:c 
+						{:
+							RESULT = new Constant(parser.symbolTable.getType("boolean"), c);
+						:}
+            | REALCONST:c 
+						{:
+							RESULT = new Constant(parser.symbolTable.getType("real"), c);
+						:};

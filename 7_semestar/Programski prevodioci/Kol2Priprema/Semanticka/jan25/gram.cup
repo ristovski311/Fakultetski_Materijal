@@ -1,0 +1,78 @@
+terminal RBR, LBR, COMMA, COL;
+terminal String STR_VAL;
+terminal Integer INT_VAL;
+terminal Double REAL_VAL;
+terminal Constant VAL;
+terminal String ID;
+
+non terminal Json;
+non terminal ArrayList<String> Members;
+non terminal String Pair;
+
+//Gramatika
+
+Json :: = LBR Members:m RBR 
+{:
+
+:};
+
+
+
+Members ::= Members:m COMMA Pair:p
+{:
+    if(p.isEmpty())
+    {
+        System.out.println("ID ne sme biti prazan string");
+    }
+    for(String id : m)
+    {
+        if(id.equals(p))
+        {
+            System.out.println("U members listi ne sme se vise puta javljati isti ID");
+        }
+    }
+    m.add(p);
+    RESULT = m;
+:}
+
+| Pair:p
+{:
+    RESULT = new ArrayList<String>();
+    if(p.isEmpty())
+    {
+        System.out.println("ID ne sme biti prazan string");
+    }
+    RESULT.add(p);
+:};
+
+
+
+Pair ::= ID:name COL VAL
+{:
+    RESULT = name;
+:}
+
+| ID:name COL Json
+{:
+    RESULT = name;
+:};
+
+
+
+VAL ::= STR_VAL:s
+{:
+    RESULT = new Constant(parser.symbolTable.getType("char"), s);
+:}
+
+| INT_VAL:i
+{:
+    RESULT = new Constant(parser.symbolTable.getType("integer"), i);
+:}
+
+| REAL_VAL:r
+{:
+    RESULT = new Constant(parser.symbolTable.getType("real"), r);
+    //Prethodno je potrebno da se u Type klasi doda novi tip real 
+    //npr public static int REAL = 3;
+    //i da se u konstruktoru SymbolTable klase doda type = new Type("real", Type.REAL, type);
+:};

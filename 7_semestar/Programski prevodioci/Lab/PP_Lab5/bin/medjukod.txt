@@ -1,0 +1,101 @@
+
+
+
+MEDJUKOD ZA RELACIONE OPERATORE:
+
+1. ==
+	Compare_Equal R1, R2
+
+2. <>
+	Compare_Equal R1, R2
+	Compare_Equal R1, 0
+		
+3. <
+	Compare_Less R1, R2
+
+4. >
+	Compare_Greater R1, R2	
+	
+5. <=
+	Compare_Greater R1, R2
+	Compare_Equal R1, 0
+
+6. >=
+	Compare_Less R1, R2
+	Compare_Equal R1, 0
+
+
+MEDJUKOD ZA IF - ELIF - ELSE naredbe:
+
+Kod:
+
+if e1 then s1
+elif e2 then s2
+elif e3 then s3
+...
+elif eN then sN
+else sN+1
+
+
+Medjukod:
+
+	IMC<e1>
+	Load_Mem R1, REZ<e1>
+	JumpIfZero elif1
+	IMC<s1>
+	Jump endLabel
+elif1:
+	IMC<e2>
+	Load_Mem R1, REZ<e2>
+	JumpIfZero elif2
+	IMC<s2>
+	Jump endLabel
+elif2:
+	...
+elifN:
+	IMC<eN>
+	Load_Mem R1, REZ<eN>
+	JumpIfZero elseLabel
+	IMC<eN>
+	Jump endLabel
+elseLabel:
+	IMC<sN+1>	
+endLabel:
+	...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

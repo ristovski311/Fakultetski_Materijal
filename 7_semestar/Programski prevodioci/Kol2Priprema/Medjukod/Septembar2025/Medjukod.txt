@@ -1,0 +1,26 @@
+
+
+
+
+e1 ? e2 : e3 : e4
+
+    IMC<e1>
+    Load_Mem R1, Result<e1>
+    Load_Const R2, 0
+    Compare_Less R2, R1 (u R2 je 1 ako je R2 manje od R1, sto znaci da je R1 > 0)
+    JumpIfZero manjeJednako
+    IMC<e4>
+    Load_Mem R1, Result<e4>
+    Jump kraj
+manjeJednako:
+    Load_Const R2, 0
+    Compare_Greater R2, R1 (U R2 je 1 ako je R2 vece od R1, tj R1 < 0)
+    JumpIfZero jednako
+    IMC<e2>
+    Load_Mem R1, Result<e2>
+    Jump kraj
+jednako:
+    IMC<e3>
+    Load_Mem R1, Result<e3>
+kraj:
+    Store R1, Result<ConditionalExpression>

@@ -43,10 +43,20 @@ CIND19347View::CIND19347View() noexcept
 	cactus_angle = 0;
 	cactus_part_angle = 0;
 
-	initialMetafileRectangle = CRect(-20, -20, 20, 20);
+	mf_dark_part = GetEnhMetaFile(L".\\res\\cactus_part.emf");
+	mf_light_part = GetEnhMetaFile(L".\\res\\cactus_part_light.emf");
 
-	mf_dark_part = GetEnhMetaFile(L"C:\\gitHub\\Fakultetski_Materijal\\7_semestar\\Racunarska grafika\\Lab\\Lab_2\\RESURSI\\cactus_part.emf");
-	mf_light_part = GetEnhMetaFile(L"C:\\gitHub\\Fakultetski_Materijal\\7_semestar\\Racunarska grafika\\Lab\\Lab_2\\RESURSI\\cactus_part_light.emf");
+	ENHMETAHEADER emh;
+	GetEnhMetaFileHeader(mf_dark_part, sizeof(emh), &emh);
+	int mfWidth = emh.rclBounds.right - emh.rclBounds.left;
+	int mfHeight = emh.rclBounds.bottom - emh.rclBounds.top;
+	int factor = 6;
+
+	int factoredX = (mfWidth / 2) / factor;
+	int factoredY = (mfHeight / 2) / factor;
+	
+	initialMetafileRectangle = CRect(-factoredX, -factoredY, factoredX, factoredY);
+	
 	if (!mf_dark_part)
 	{
 		AfxMessageBox(_T("Greska pri citanju dark metafajla!"));
@@ -97,7 +107,6 @@ void CIND19347View::ShowGrid(CDC* pdc) {
 	delete newpen;
 }
 
-
 void CIND19347View::Translate(CDC* pdc, float dX, float dY, bool rightMultiply) {
 	XFORM trans;
 	trans.eM11 = 1.0;
@@ -112,8 +121,6 @@ void CIND19347View::Translate(CDC* pdc, float dX, float dY, bool rightMultiply) 
 		pdc->ModifyWorldTransform(&trans, MWT_LEFTMULTIPLY);
 }
 
-
-
 void CIND19347View::Scale(CDC* pdc, float sX, float sY, bool rightMultiply) {
 	XFORM scale;
 	scale.eM11 = sX;
@@ -127,8 +134,6 @@ void CIND19347View::Scale(CDC* pdc, float sX, float sY, bool rightMultiply) {
 	else
 		pdc->ModifyWorldTransform(&scale, MWT_LEFTMULTIPLY);
 }
-
-
 
 void CIND19347View::Rotate(CDC* pdc, float angle, bool rightMultiply) {
 	XFORM trans;
@@ -155,31 +160,25 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	
 	CRect cactus_connector = new CRect(-10, -10, 10, 10);
 	
-	//Centar kaktus konektora oko kog se svetli deo kaktusa rotira
-	int c_rotira_x = 12 * GSS;
-	int c_rotira_y = 12 * GSS; 
+	//Kaktus konektor u saksiji oko cega se ceo kaktus rotira
+	float c_saksija_x = 10 * GSS;
+	float c_saksija_y = 17 * GSS;
 
 	//Centar kaktus konektora iznad najdebljeg kaktus dela
-	int c_debeo_x = 10 * GSS;
-	int c_debeo_y = 14* GSS;
+	float c_debeo_x = c_saksija_x;
+	float c_debeo_y = c_saksija_y - 3 * GSS;
 
 	//Centar kaktus konektora levog od tri tamna
-	int c_levi_tamni_x = 8 * GSS;
-	int c_levi_tamni_y = 12 * GSS;
+	float c_levi_tamni_x = c_debeo_x - 2 * GSS;
+	float c_levi_tamni_y = c_debeo_y - 2 * GSS;
 
-	//Centar najviseg kaktus konektora
-	int c_najvisi_x = 8 * GSS;
-	int c_najvisi_y = 9 * GSS;
+	//Centar kaktus konektora oko kog se svetli deo kaktusa rotira
+	float c_rotira_x = c_debeo_x + 2 * GSS;
+	float c_rotira_y = c_debeo_y - 2 * GSS;
 
 	//Centar kaktus konektora koji je najvise desno
-	int c_najvise_desno_x = 15 * GSS;
-	int c_najvise_desno_y = 12 * GSS;
-
-	//Kaktus konektor u saksiji oko cega se ceo kaktus rotira
-	int c_saksija_x = 10 * GSS;
-	int c_saksija_y = 17 * GSS;
-
-
+	float c_najvise_desno_x = c_rotira_x + 3 * GSS;
+	float c_najvise_desno_y = c_rotira_y;
 
 
 	///
@@ -187,19 +186,28 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	///
 
 	//Inicijalno postavljanje pozicije svetlog dela kaktusa (pomeren sa (0,0))
-	Scale(pdc, 1, 2, true);
-	Translate(pdc, c_rotira_x, c_rotira_y - initialMetafileRectangle.Height()/2 - cactus_connector.Height(), true);
+	Scale(pdc, 0.5, 2, true);
+	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y - initialMetafileRectangle.Height()/2 - cactus_connector.Height(), true);
+
+	//Inicijalna rotacija oko svog kaktus konektora
+	Translate(pdc, -c_najvise_desno_x, -c_najvise_desno_y, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y, true);
 
 	//Rotacija svetlog dela kaktusa oko svog kaktus konektora
-	Translate(pdc, -c_rotira_x, -c_rotira_y, true);
+	Translate(pdc, -c_najvise_desno_x, -c_najvise_desno_y, true);
 	Rotate(pdc, cactus_part_angle, true);
-	Translate(pdc, c_rotira_x, c_rotira_y, true);
-	
-	//Rotacija oko kaktus konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y, true);
 
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
+	Rotate(pdc, cactus_angle, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Svetli deo kaktusa koji se rotira
 	pdc->PlayMetaFile(mf_light_part, initialMetafileRectangle);
@@ -207,32 +215,27 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	pdc->SetWorldTransform(&prevMatrix);
 	
 
-
-
 	///
-	//Kaktus deo svetli debeo
+	//Kaktus deo tamni debeo na dnu
 	///
 
 	//Inicijalno pomeranje na poziciju
 	Scale(pdc, 1.5, 2, true);
 	Translate(pdc, c_saksija_x, c_saksija_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 	
-	//Rotacija oko kaktus konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
-	pdc->PlayMetaFile(mf_light_part, initialMetafileRectangle);
+	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
 
 	pdc->SetWorldTransform(&prevMatrix);
 
 
-
-
-
 	///
-	//Tri tamna kaktus dela iznad najveceg kaktus dela
+	//Tri kaktus dela iznad najveceg kaktus dela
 	///
 
 	//Sredisnji
@@ -241,10 +244,10 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	Scale(pdc, 0.5, 2, true);
 	Translate(pdc, c_debeo_x, c_debeo_y - initialMetafileRectangle.Height()/2 - 2 * cactus_connector.Height() / 3, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
@@ -262,17 +265,17 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	Rotate(pdc, -45, true);
 	Translate(pdc, c_debeo_x, c_debeo_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
 
 	pdc->SetWorldTransform(&prevMatrix);
 
-	//Desni
+	//Desni - OVAJ SE SAD ROTIRA U NOVOM ZADATKU
 	//
 	//Inicijalno postavljanje pozicija
 	Scale(pdc, 0.5, 2, true);
@@ -283,33 +286,41 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	Rotate(pdc, 45, true);
 	Translate(pdc, c_debeo_x, c_debeo_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
-	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
+	pdc->PlayMetaFile(mf_light_part, initialMetafileRectangle);
 
 	pdc->SetWorldTransform(&prevMatrix);
 
 
-
-
 	///
-	// Kaktusi tamni na levom konektoru od tri tamna
+	// Kaktusi tamni na bivsem rotirajucem
 	///
 
 	//Uspravan
 	// 
 	//Inicijalno postavljanje pozicije
-	Scale(pdc, 1, 2, true);
-	Translate(pdc, c_levi_tamni_x, c_levi_tamni_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
+	Scale(pdc, 0.5, 2, true);
+	Translate(pdc, c_rotira_x, c_rotira_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
@@ -319,32 +330,36 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	//Nalevo
 	// 
 	//Inicijalno postavljanje pozicije
-	Scale(pdc, 1, 2, true);
-	Translate(pdc, c_levi_tamni_x, c_levi_tamni_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
+	Scale(pdc, 0.5, 2, true);
+	Translate(pdc, c_rotira_x, c_rotira_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 
 	//Rotacija oko konektora ispod njega
-	Translate(pdc, -c_levi_tamni_x, -c_levi_tamni_y, true);
-	Rotate(pdc, -90, true);
-	Translate(pdc, c_levi_tamni_x, c_levi_tamni_y, true);
+	Translate(pdc, -c_rotira_x, -c_rotira_x, true);
+	Rotate(pdc, 45, true);
+	Translate(pdc, c_rotira_x, c_rotira_x, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
 
 	pdc->SetWorldTransform(&prevMatrix);
-
-	
+		
 
 	///
-	// Tamni kaktus deo na rotirajucem konektoru
+	// Tamni kaktus deo na bivsem rotirajucem konektoru ide nalevo
 	///
 
 	//Inicijalno pomeranje na poziciju
-	Scale(pdc, 1, 2, true);
+	Scale(pdc, 0.5, 2, true);
 	Translate(pdc, c_rotira_x, c_rotira_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 
 	//Rotacija oko svog konektora nadesno
@@ -352,10 +367,15 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	Rotate(pdc, 90, true);
 	Translate(pdc, c_rotira_x, c_rotira_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Cratanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
@@ -364,13 +384,13 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 
 
 	///
-	//Dva tamna kaktus dela na konektoru najvise desno
+	//Dva tamna kaktus dela na konektoru najvise desno iznad i ispod onog sto se sad rotira
 	///
 
 	//Nagore
 	//
 	//Inicijalno pomeranje na poziciju
-	Scale(pdc, 1, 2, true);
+	Scale(pdc, 0.5, 2, true);
 	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 
 	//Rotacija oko svog konektora
@@ -378,10 +398,15 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	Rotate(pdc, 45, true);
 	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
@@ -391,7 +416,7 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	//Nadole
 	//
 	//Inicijalno pomeranje na poziciju
-	Scale(pdc, 1, 2, true);
+	Scale(pdc, 0.5, 2, true);
 	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 
 	//Rotacija oko svog konektora
@@ -399,10 +424,15 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	Rotate(pdc, 135, true);
 	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
@@ -416,19 +446,22 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 
 	//Inicijalno postavljanje pozicije
 	Scale(pdc, 1.5, 2, true);
-	Translate(pdc, c_najvisi_x, c_najvisi_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
+	Translate(pdc, c_levi_tamni_x, c_levi_tamni_y - initialMetafileRectangle.Height() / 2 - cactus_connector.Height(), true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	//Rotacija oko svog konektora
+	Translate(pdc, -c_levi_tamni_x, -c_levi_tamni_y, true);
+	Rotate(pdc, -45, true);
+	Translate(pdc, c_levi_tamni_x, c_levi_tamni_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->PlayMetaFile(mf_dark_part, initialMetafileRectangle);
 
 	pdc->SetWorldTransform(&prevMatrix);
-
-
 
 
 	///
@@ -437,7 +470,7 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 
 
 	///
-	//Konektor oko kog se svetli deo kaktusa rotira
+	//Konektor oko kog se svetli deo kaktusa rotirao nekad
 	///
 
 	CPen* newpen = new CPen(PS_COSMETIC, 1, RGB(0, 128, 0));
@@ -448,18 +481,20 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 
 	Translate(pdc, c_rotira_x, c_rotira_y, true);
 
-	//Rotacija oko kaktus konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->Ellipse(cactus_connector);
 	
 	pdc->SetWorldTransform(&prevMatrix);
-
-
-
 
 
 	///
@@ -469,41 +504,15 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	//Inicijalno pomeranje na poziciju
 	Translate(pdc, c_levi_tamni_x, c_levi_tamni_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
-
-
-	//Crtanje
-	pdc->Ellipse(cactus_connector);
-
-	pdc->SetWorldTransform(&prevMatrix);
-
-
-
-
-
-	///
-	//Konektor najvisi
-	///
-
-	//Inicijalno pomeranje na poziciju
-	Translate(pdc, c_najvisi_x, c_najvisi_y, true);
-
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
-
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->Ellipse(cactus_connector);
 
 	pdc->SetWorldTransform(&prevMatrix);
-
-
-
 
 
 	///
@@ -513,52 +522,83 @@ void CIND19347View::DrawFigure(CDC* pdc) {
 	//Inicijalno pomeranje na poziciju
 	Translate(pdc, c_najvise_desno_x, c_najvise_desno_y, true);
 
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
+	//Rotacija oko konektora na debelom donjem
+	Translate(pdc, -c_debeo_x, -c_debeo_y, true);
 	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
+	Translate(pdc, c_debeo_x, c_debeo_y, true);
 
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->Ellipse(cactus_connector);
 
 	pdc->SetWorldTransform(&prevMatrix);
-
 	
 
-
-
 	///
-	//Konektor iznad najveceg kaktus dela
+	//Konektor iznad najveceg kaktus dela - sad je on oko koga se rotiraju desni delovi
 	///
 
 	//Inicijalno pomeranje na poziciju
 	Translate(pdc, c_debeo_x, c_debeo_y, true);
-	
-	//Rotacija oko konektora u saksiji
-	Translate(pdc, -c_saksija_x, -c_saksija_y, true);
-	Rotate(pdc, cactus_angle, true);
-	Translate(pdc, c_saksija_x, c_saksija_y, true);
 
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
 
 	//Crtanje
 	pdc->Ellipse(cactus_connector);
-
 	pdc->SetWorldTransform(&prevMatrix);
-
-
-
-
 
 	//
 	//Kaktus konektor u saksiji
 	//
 
 	Translate(pdc, c_saksija_x, c_saksija_y, true);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
+
 	pdc->Ellipse(cactus_connector);
+	pdc->SetWorldTransform(&prevMatrix);
+
+	delete newpen;
+	delete newbrush;
+
+	///
+	//SAKSIJA
+	///
+
+	newbrush = new CBrush(RGB(222, 148, 0));
+	oldbrush = pdc->SelectObject(newbrush);
+	newpen = new CPen(PS_COSMETIC, 1, RGB(0, 0, 0));
+	oldpen = pdc->SelectObject(newpen);
+
+	//Rotacija da slika bude okrenuta
+	Translate(pdc, -250, -250, true);
+	Rotate(pdc, 90, true);
+	Translate(pdc, 250, 250, true);
+
+	pdc->Rectangle(7.5 * GSS, 17.2 * GSS, 12.5 * GSS, 18 * GSS);
+
+	POINT pts[4] = {
+		CPoint(8 * GSS,18 * GSS),
+		CPoint(12 * GSS,18 * GSS),
+		CPoint(11.5 * GSS,20 * GSS),
+		CPoint(8.5 * GSS,20 * GSS)
+	};
+
+	pdc->Polygon(pts, 4);
 
 	pdc->SetWorldTransform(&prevMatrix);
 
+	//Vracanje svega na prvobitno stanje
 	pdc->SelectObject(oldpen);
 	pdc->SelectObject(oldbrush);
 	delete newpen;
@@ -578,7 +618,6 @@ void CIND19347View::OnDraw(CDC* pdc)
 	if (!pDoc)
 		return;
 
-
 	///
 	//Postavljamo advanced graphics mode
 	///
@@ -590,8 +629,6 @@ void CIND19347View::OnDraw(CDC* pdc)
 		AfxMessageBox(_T("Greska pri postavljanju GM_ADVANCED!"));
 		return;
 	}
-
-
 
 	///
 	//Plava pozadina
@@ -610,75 +647,43 @@ void CIND19347View::OnDraw(CDC* pdc)
 
 	delete newbrush;
 
-
-
 	///
-	//KAKTUSSS
+	//KAKTUS
 	///
 
-	DrawFigure(pdc);
+	//KOD ZA ZADATAK: 72072
 
-
-
-	///
-	//SAKSIJA T1(7.5GSS, 17.2GSS) T2(12.5GSS, 18GSS)
-	///
-
-	newbrush = new CBrush(RGB(222, 148, 0));
-	oldbrush = pdc->SelectObject(newbrush);
-	newpen = new CPen(PS_COSMETIC, 1, RGB(0, 0, 0));
-	oldpen = pdc->SelectObject(newpen);
-
-	pdc->Rectangle(7.5 * GSS, 17.2 * GSS, 12.5 * GSS, 18 * GSS);
-
-	POINT pts[4] = {
-		CPoint(8 * GSS,18 * GSS),
-		CPoint(12 * GSS,18 * GSS),
-		CPoint(11.5 * GSS,20 * GSS),
-		CPoint(8.5 * GSS,20 * GSS)
-	};
-
-	pdc->Polygon(pts, 4);
-
-	pdc->SelectObject(oldpen);
-	pdc->SelectObject(oldbrush);
-
-	delete newpen;
-	delete newbrush;
-
-
+	//DrawFigure(pdc);
 
 	///
-	// Tekst Kaktusss
+	// TEKST
 	///
 
-	//Moguce je i preko svetskih transformacija!
-	/*XFORM prevMatrix;
-	pdc->GetWorldTransform(&prevMatrix);
-	Translate(pdc, -18 * GSS, -GSS, true);
-	Rotate(pdc, 90, true);
-	Translate(pdc, 18 * GSS, GSS, true);*/
+	//int prevBkMode = pdc->SetBkMode(TRANSPARENT);
+	//CFont* newfont = new CFont();
+	//
+	////Moguce je i preko svetskih transformacija!
+	///*XFORM prevMatrix;
+	//pdc->GetWorldTransform(&prevMatrix);
+	//Translate(pdc, -18 * GSS, -GSS, true);
+	//Rotate(pdc, 90, true);
+	//Translate(pdc, 18 * GSS, GSS, true);
+	//newfont->CreateFontW(GSS, 12, 0, 0, 700, 0, 0, 0, 0, 0, 0, 0, 0, L"Arial"); */
+	//	
+	//newfont->CreateFontW(30, 12, -900, -900, 600, 0, 0, 0, 0, 0, 0, 0, 0, L"Arial");
+	//CFont* oldfont = pdc->SelectObject(newfont);
+	//COLORREF oldFontColor = pdc->SetTextColor(RGB(0, 0, 0));
+	//
+	//pdc->SetTextColor(RGB(0, 0, 0)); //CRNA
+	//pdc->TextOutW(19*GSS,GSS + 3 /*Da bude crni malo nize od zutog teksta*/, L"Biljka", 8);
+	//pdc->SetTextColor(RGB(255, 255, 0)); //ZUTA
+	//pdc->TextOutW(19 * GSS, GSS, L"Biljka", 8);
 
-	int prevBkMode = pdc->SetBkMode(TRANSPARENT);
-	CFont* newfont = new CFont();
-	
-	//newfont->CreateFontW(GSS, 12, 0, 0, 700, 0, 0, 0, 0, 0, 0, 0, 0, L"Arial"); //Ako radimo sa transformacijama
-	
-	newfont->CreateFontW(30, 12, -900, -900, 600, 0, 0, 0, 0, 0, 0, 0, 0, L"Arial");
-	CFont* oldfont = pdc->SelectObject(newfont);
-	COLORREF oldFontColor = pdc->SetTextColor(RGB(0, 0, 0));
-	
-	pdc->TextOutW(19*GSS,GSS + 3 /*Da bude crni malo nize od zutog teksta*/, L"Kaktusss", 8);
-	pdc->SetTextColor(RGB(255, 255, 0));
-	pdc->TextOutW(19 * GSS, GSS, L"Kaktusss", 8);
-
-	pdc->SelectObject(oldfont);
-	delete newfont;
-	pdc->SetBkMode(prevBkMode);
+	//pdc->SelectObject(oldfont);
+	//delete newfont;
+	//pdc->SetBkMode(prevBkMode);
 
 	//pdc->SetWorldTransform(&prevMatrix);
-
-
 
 	///
 	//Prikaz grid-a
@@ -759,7 +764,6 @@ CIND19347Doc* CIND19347View::GetDocument() const // non-debug version is inline
 
 
 // CIND19347View message handlers
-
 
 void CIND19347View::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {

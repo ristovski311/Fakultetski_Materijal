@@ -1,0 +1,13 @@
+
+
+
+WHILE expression DO
+    statement
+
+label0:
+    IMC<expression>
+    Load_Mem Result<expression>
+    JumpIfZero label1
+    IMC<statement>
+    Jump label0
+label1:

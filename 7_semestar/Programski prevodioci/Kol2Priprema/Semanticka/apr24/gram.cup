@@ -1,0 +1,74 @@
+terminal NEW, LPAR, RPAR, LBR, RBR;
+terminal STRING TYPE;
+terminal Constant CONST;
+terminal Integer INT_CONST;
+terminal Double REAL_CONST;
+terminal String STR_CONST;
+
+non terminal TypeAndDim ArrCr;
+non terminal ArrayList<TypeAndDim> IList;
+non terminal TypeAndDim Init;
+
+// Gramatika
+
+ArrCr ::= NEW TYPE:t LPAR CONST:con RPAR
+{:
+    //Prvo semanticko pravilo
+    if(con.type.tkind != Type.INT)
+    {
+        System.out.println("CONST u [] mora biti tipa integer");
+    }
+
+    RESULT = new TypeAndDim(t, 1);
+:}
+| NEW TYPE:t LPAR RPAR LBR IList:list RBR
+{:
+    for(TypeAndDim el : list)
+    {
+        if(!el.type.equals(t))
+        {
+            System.out.println("Tipovi u listi se ne slazu sa tipom ispred liste");
+        }
+    }
+
+    RESULT = new TypeAndDim(t, list.get(0).dim + 1);
+:};
+
+
+IList ::= IList:list COMMA Init:i
+{:
+    list.add(i);
+    if(list.get(0).dim != i.dim)
+        System.out.println("Neodgovarajuce dimenzije!");
+    RESULT = list;
+:}
+| Init:i
+{:
+    RESULT = new ArrayList<TypeAndDim>();
+    RESULT.add(i);
+:};
+
+Init ::= CONST:c 
+{:
+    RESULT = new TypeAndDim(c.type.name, 0);
+:}
+| ArrCr:a
+{:
+    RESULT = a;
+:};
+
+
+CONST ::= INT_CONST:ic
+{:
+    RESULT = new Constant(parser.symbolTable.getType("integer"), ic)
+:}
+| REAL_CONST:rc 
+{:
+    RESULT = new Constant(parser.symbolTable.getType("real"), rc);
+    //Mora da se kreira novi tip u Type klasi : public static void int REAL = 4;
+    //Zatim u symbolTable konstruktoru da se doda type = new Type("real", Type.REAL, type);
+:}
+| STR_CONST:sc
+{:
+    RESULT = new Constant(parser.symbolTable.getType("char"), sc);
+:};
